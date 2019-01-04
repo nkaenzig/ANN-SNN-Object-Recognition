@@ -1,0 +1,49 @@
+[paths]
+path_wd = ./models/report/DVS63_EVTACC_10E
+#path_wd = ./models/report/DVS63_EVTACC_MAXPOOL_L2_10E
+#path_wd = ./models/report/DVS63_EVTACC_AVGPOOL_L2_10E
+path_wd = ./models/report/dvs36_evtacc_maxpool_B0_10E
+#path_wd = ./models/report/dvs36_evtacc_avgpool_B0_30E
+#path_wd = ./models/report/dvs36_evtacc_maxpool_B0_10E_singlesub
+
+#dataset_path = ./models/data/npz/dvs/predator
+dataset_path = ./models/data/npz/dvs/evtacc/3dim
+#dataset_path = ./models/data/npz/dvs/predator
+
+filename_ann = weights.09-0.39
+#filename_ann = weights.09-0.40
+#filename_ann = weights.09-0.37
+filename_ann = weights.09-0.38
+#filename_ann = weights.09-0.40
+#filename_ann = weights.09-0.39
+
+
+[tools]
+evaluate_ann = False
+normalize = True
+
+[normalization]
+percentile = 99.9
+
+[simulation]
+simulator = INI
+duration = 250
+num_to_test = 10
+batch_size = 1
+
+[conversion]
+softmax_to_relu = False
+
+[input]
+poisson_input = False
+num_poisson_events_per_sample = -1
+input_rate = 200
+dataset_format = npz
+
+[output]
+#log_vars = {'all'}
+#plot_vars = {'all'}
+#plot_vars = {'confusion_matrix'}
+
+[cell]
+#reset = Reset to zero

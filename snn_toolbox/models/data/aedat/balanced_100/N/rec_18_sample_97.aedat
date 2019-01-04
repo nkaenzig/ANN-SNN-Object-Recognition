@@ -1,0 +1,1786 @@
+#!AER-DAT2.0
+# This is a raw AE data file - do not edit
+# Data format is int32 address, int32 timestamp (8 bytes total), repeated for each event
+# Timestamps tick is 1 us
+# created Fri Feb 26 10:22:32 GMT 2016
+# HardwareInterface: DAVIS FX2 04010058
+# AEChip: eu.seebetter.ini.chips.davis.DAVIS240C
+#Start of Preferences for this AEChip
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+#<!DOCTYPE preferences SYSTEM "http://java.sun.com/dtd/preferences.dtd">
+#<preferences EXTERNAL_XML_VERSION="1.0">
+#  <root type="user">
+#    <map/>
+#    <node name="eu">
+#      <map/>
+#      <node name="seebetter">
+#        <map/>
+#        <node name="ini">
+#          <map/>
+#          <node name="chips">
+#            <map/>
+#            <node name="davis">
+#              <map>
+#                <entry key="AEChip.subSamplingEnabled" value="false"/>
+#                <entry key="ATCFpgaConfig.BGAF_OTs_Enable" value="true"/>
+#                <entry key="ATCFpgaConfig.OTsEnable" value="true"/>
+#                <entry key="ATCFpgaConfig.bgaFilterDeltaT" value="1000000"/>
+#                <entry key="ATCFpgaConfig.cmCellMaxTime" value="129033"/>
+#                <entry key="ATCFpgaConfig.cmCellNevTh" value="6"/>
+#                <entry key="ATCFpgaConfig.cmCellRadixMax" value="7"/>
+#                <entry key="ATCFpgaConfig.cmCellRadixMin" value="7"/>
+#                <entry key="ATCFpgaConfig.cmCellRadixStep" value="7"/>
+#                <entry key="ATCFpgaConfig.cmCellRadixTh" value="7"/>
+#                <entry key="ATCFpgaConfig.trackerEnable" value="false"/>
+#                <entry key="ATCFpgaConfig.trackerId" value="1"/>
+#                <entry key="AdaptiveGaussianTracker.filterEnabled" value="false"/>
+#                <entry key="AerCorrFilter.filterEnabled" value="true"/>
+#                <entry key="AerCorrFilter.iLeak" value="10"/>
+#                <entry key="AerCorrFilter.iLeakCOV" value="0.10107793"/>
+#                <entry key="AerCorrFilter.iLeakPicoAmps" value="37.688988"/>
+#                <entry key="AerCorrFilter.subsampleBy" value="1"/>
+#                <entry key="AnalogOutputMux.AnaMux0.selectedChannel" value="-1"/>
+#                <entry key="AnalogOutputMux.AnaMux1.selectedChannel" value="-1"/>
+#                <entry key="AnalogOutputMux.AnaMux2.selectedChannel" value="-1"/>
+#                <entry key="ApproachCell.enableSpikeSound" value="true"/>
+#                <entry key="ApproachCell.filterEnabled" value="false"/>
+#                <entry key="ApproachCell.maxSpikeRateHz" value="66.22517"/>
+#                <entry key="ApproachCell.minUpdateIntervalUs" value="962"/>
+#                <entry key="ApproachCell.onOffWeightRatio" value="1.5315377"/>
+#                <entry key="ApproachCell.poissonFiringEnabled" value="false"/>
+#                <entry key="ApproachCell.showSubunits" value="true"/>
+#                <entry key="ApproachCell.subunitActivationThresholdSpikes" value="0.0"/>
+#                <entry key="ApproachCell.subunitDecayTimeconstantMs" value="60.000008"/>
+#                <entry key="ApproachCell.subunitSubsamplingBits" value="6"/>
+#                <entry key="ApproachCell.surroundSuppressionEnabled" value="true"/>
+#                <entry key="ApproachCell.synapticWeight" value="11.872029"/>
+#                <entry key="ApsDvsAutoShooter.eventCountThresholdKEvents" value="89"/>
+#                <entry key="ApsDvsAutoShooter.eventRateThresholdHz" value="184736.56"/>
+#                <entry key="ApsDvsAutoShooter.filterEnabled" value="false"/>
+#                <entry key="ApsDvsAutoShooter.trackerMovementPixelsForNewFrame" value="41"/>
+#                <entry key="ApsDvsAutoShooter.useEventCount" value="false"/>
+#                <entry key="ApsDvsAutoShooter.useEventRateThreshold" value="false"/>
+#                <entry key="ApsDvsAutoShooter.useTracker" value="true"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.excessSpeedRejectFactor" value="2"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.filterEnabled" value="false"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.jitterAmountPixels" value="0.77566385"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.maxDtThreshold" value="68820"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.minDtThreshold" value="877"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.showGlobalEnabled" value="true"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.showRawInputEnabled" value="true"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.showVectorsEnabled" value="true"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.speedControlEnabled" value="true"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.speedMixingFactor" value="0.006319242"/>
+#                <entry key="ApsDvsDirectionSelectiveFilter.useAvgDtEnabled" value="true"/>
+#                <entry key="ApsDvsEventFilter.filterAPSEvents" value="true"/>
+#                <entry key="ApsDvsEventFilter.filterDVSEvents" value="false"/>
+#                <entry key="ApsDvsEventFilter.filterEnabled" value="false"/>
+#                <entry key="ApsDvsFaceTracker.filterEnabled" value="false"/>
+#                <entry key="ApsDvsFaceTracker.octaves" value="4"/>
+#                <entry key="ApsDvsFaceTracker.scale" value="1.0"/>
+#                <entry key="ApsDvsOrientationFilter.filterEnabled" value="false"/>
+#                <entry key="ApsDvsOrientationFilter.minDtThreshold" value="37689"/>
+#                <entry key="ApsDvsOrientationFilter.oriHistoryEnabled" value="false"/>
+#                <entry key="ApsDvsOrientationFilter.showRawInputEnabled" value="true"/>
+#                <entry key="ApsDvsOrientationFilter.showVectorsEnabled" value="true"/>
+#                <entry key="ApsDvsOrientationFilter.useAverageDtEnabled" value="false"/>
+#                <entry key="ApsEventFilter.filterAPSEvents" value="true"/>
+#                <entry key="ApsEventFilter.filterDVSEvents" value="false"/>
+#                <entry key="ApsEventFilter.filterEnabled" value="true"/>
+#                <entry key="ApsFaceDetector.filterEnabled" value="false"/>
+#                <entry key="ApsFeatureExtractor.detectionMethod" value="BRISK"/>
+#                <entry key="ApsFeatureExtractor.detectionThreshold" value="25"/>
+#                <entry key="ApsFeatureExtractor.filterEnabled" value="false"/>
+#                <entry key="ApsFeatureExtractor.pullFrames" value="true"/>
+#                <entry key="ApsFrameExtractor.deltaBufferSize" value="1000.0"/>
+#                <entry key="ApsFrameExtractor.displayBrightness" value="0.0"/>
+#                <entry key="ApsFrameExtractor.displayContrast" value="1.0"/>
+#                <entry key="ApsFrameExtractor.displayGain" value="2.526948"/>
+#                <entry key="ApsFrameExtractor.displayOffset" value="0.0"/>
+#                <entry key="ApsFrameExtractor.edgePixelMethod" value="SignalFrame"/>
+#                <entry key="ApsFrameExtractor.extrapolateIntesity" value="false"/>
+#                <entry key="ApsFrameExtractor.filterEnabled" value="false"/>
+#                <entry key="ApsFrameExtractor.invertIntensity" value="false"/>
+#                <entry key="ApsFrameExtractor.logCompress" value="false"/>
+#                <entry key="ApsFrameExtractor.logDecompress" value="false"/>
+#                <entry key="ApsFrameExtractor.manualOffGain" value="-0.2218"/>
+#                <entry key="ApsFrameExtractor.preBufferFrame" value="false"/>
+#                <entry key="ApsFrameExtractor.showAPSFrameDisplay" value="true"/>
+#                <entry key="ApsFrameExtrapolation.averagingWindow" value="10"/>
+#                <entry key="ApsFrameExtrapolation.extrapolationMethod" value="Accum"/>
+#                <entry key="ApsFrameExtrapolation.filterEnabled" value="false"/>
+#                <entry key="ApsFrameExtrapolation.lowPassTimeConst" value="1.0"/>
+#                <entry key="ApsFrameExtrapolation.manualOffGain" value="-0.06837005"/>
+#                <entry key="ApsFrameExtrapolation.manualOnGain" value="0.065114334"/>
+#                <entry key="ApsFrameExtrapolation.useOpenCV" value="false"/>
+#                <entry key="ApsFrameExtrapolationISCAS.binAvgMixingFactor" value="0.21212864"/>
+#                <entry key="ApsFrameExtrapolationISCAS.clipping" value="false"/>
+#                <entry key="ApsFrameExtrapolationISCAS.displayError" value="false"/>
+#                <entry key="ApsFrameExtrapolationISCAS.filterEnabled" value="false"/>
+#                <entry key="ApsFrameExtrapolationISCAS.globalAverageGainMixingFactor" value="0.25"/>
+#                <entry key="ApsFrameExtrapolationISCAS.learningRate" value="0.07174074"/>
+#                <entry key="ApsFrameExtrapolationISCAS.lowpassFilterTime" value="0.3042633"/>
+#                <entry key="ApsFrameExtrapolationISCAS.manualOffGain" value="-0.1"/>
+#                <entry key="ApsFrameExtrapolationISCAS.manualOnGain" value="0.100949414"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins0" value="-0.012166297"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins1" value="-0.014944995"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins2" value="-0.0027896487"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins3" value="-2.3771895E-4"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins4" value="-2.9404848E-4"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins5" value="-2.3822737E-4"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins6" value="-1.7846204E-4"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins7" value="-1.8000872E-4"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins8" value="-1.1096996E-4"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBins9" value="-0.0020467269"/>
+#                <entry key="ApsFrameExtrapolationISCAS.offTimeBinsLength" value="3"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins0" value="0.08566755"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins1" value="0.08826801"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins2" value="0.003466838"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins3" value="0.057194676"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins4" value="0.043730885"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins5" value="0.025591912"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins6" value="0.18601383"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins7" value="0.0061156955"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins8" value="0.009833287"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBins9" value="0.002667605"/>
+#                <entry key="ApsFrameExtrapolationISCAS.onTimeBinsLength" value="3"/>
+#                <entry key="ApsFrameExtrapolationISCAS.perPixelAndTimeBinMixingFactor" value="0.04045735"/>
+#                <entry key="ApsNoiseStatistics.filterEnabled" value="false"/>
+#                <entry key="ApsNoiseStatistics.histNumBins" value="29"/>
+#                <entry key="ApsNoiseStatistics.scaleHistogramsIncludingOverflow" value="true"/>
+#                <entry key="ApsNoiseStatistics.spatialHistogramEnabled" value="true"/>
+#                <entry key="ApsNoiseStatistics.temporalNoiseEnabled" value="true"/>
+#                <entry key="AutoExposureController.highBoundary" value="0.5801483"/>
+#                <entry key="AutoExposureController.lowBoundary" value="0.13400951"/>
+#                <entry key="AutomaticReplayPlayer.filterEnabled" value="false"/>
+#                <entry key="BackgroundActivityFilter.dt" value="17213"/>
+#                <entry key="BackgroundActivityFilter.filterEnabled" value="false"/>
+#                <entry key="BackgroundActivityFilter.subsampleBy" value="0"/>
+#                <entry key="BinaryFeatureDetector.filterEnabled" value="false"/>
+#                <entry key="CPLDByte.imu0_PWR_MGMT_1" value="2"/>
+#                <entry key="CPLDByte.imu1_CONFIG" value="0"/>
+#                <entry key="CPLDByte.imu2_SMPLRT_DIV" value="0"/>
+#                <entry key="CPLDByte.imu3_GYRO_CONFIG" value="16"/>
+#                <entry key="CPLDByte.imu4_ACCEL_CONFIG" value="16"/>
+#                <entry key="CPLDByte.imu_RUN" value="1"/>
+#                <entry key="CPLDByte.miscControlBits" value="1"/>
+#                <entry key="CPLDInt.GSCpResetFD_D" value="3000"/>
+#                <entry key="CPLDInt.GSCpResetSettle_D" value="3000"/>
+#                <entry key="CPLDInt.GSFDReset_D" value="3000"/>
+#                <entry key="CPLDInt.GSPDReset_D" value="3000"/>
+#                <entry key="CPLDInt.GSResetFall_D" value="3000"/>
+#                <entry key="CPLDInt.GSTXFall_D" value="3000"/>
+#                <entry key="CPLDInt.RSCpReset_D" value="3000"/>
+#                <entry key="CPLDInt.RSCpSettle_D" value="3000"/>
+#                <entry key="CPLDInt.RSFDSettle_D" value="3000"/>
+#                <entry key="CPLDInt.Transfer_D" value="3000"/>
+#                <entry key="CPLDInt.colSettle" value="11"/>
+#                <entry key="CPLDInt.exposure" value="1053"/>
+#                <entry key="CPLDInt.exposureB" value="39"/>
+#                <entry key="CPLDInt.exposureC" value="1887"/>
+#                <entry key="CPLDInt.frameDelay" value="0"/>
+#                <entry key="CPLDInt.nullSettle" value="31"/>
+#                <entry key="CPLDInt.pad" value="0"/>
+#                <entry key="CPLDInt.resSettle" value="12"/>
+#                <entry key="CPLDInt.rowSettle" value="18"/>
+#                <entry key="CarTracker.angleFollowsVelocity" value="false"/>
+#                <entry key="CarTracker.aspectRatio" value="1.0"/>
+#                <entry key="CarTracker.clusterSize" value="0.09"/>
+#                <entry key="CarTracker.colorClustersDifferentlyEnabled" value="true"/>
+#                <entry key="CarTracker.dontMergeEver" value="true"/>
+#                <entry key="CarTracker.dynamicSizeEnabled" value="false"/>
+#                <entry key="CarTracker.enableClusterExitPurging" value="false"/>
+#                <entry key="CarTracker.filterEnabled" value="false"/>
+#                <entry key="CarTracker.highwayPerspectiveEnabled" value="false"/>
+#                <entry key="CarTracker.maxNumClusters" value="1"/>
+#                <entry key="CarTracker.mixingFactor" value="0.016"/>
+#                <entry key="CarTracker.onlyFollowTrack" value="true"/>
+#                <entry key="CarTracker.pathLength" value="100"/>
+#                <entry key="CarTracker.pathsEnabled" value="true"/>
+#                <entry key="CarTracker.relaxToTrackFactor" value="0.1"/>
+#                <entry key="CarTracker.showClusterVelocity" value="true"/>
+#                <entry key="CarTracker.useNearestCluster" value="true"/>
+#                <entry key="CarTracker.useVelocity" value="true"/>
+#                <entry key="CarTracker.vanishingPoint.x" value="NaN"/>
+#                <entry key="CarTracker.vanishingPoint.y" value="NaN"/>
+#                <entry key="CarTracker.velocityTauMs" value="30.0"/>
+#                <entry key="CarTracker.velocityVectorScaling" value="0.016"/>
+#                <entry key="CellStatsProber.filterEnabled" value="false"/>
+#                <entry key="CellStatsProber.individualISIsEnabled" value="true"/>
+#                <entry key="CellStatsProber.isiAutoScalingEnabled" value="true"/>
+#                <entry key="CellStatsProber.isiHistEnabled" value="false"/>
+#                <entry key="CellStatsProber.isiMaxUs" value="8931152"/>
+#                <entry key="CellStatsProber.logISIEnabled" value="true"/>
+#                <entry key="CellStatsProber.rateEnabled" value="true"/>
+#                <entry key="CellStatsProber.scaleHistogramsIncludingOverflow" value="false"/>
+#                <entry key="CellStatsProber.showAverageISIHistogram" value="true"/>
+#                <entry key="CellStatsProber.showIndividualISIHistograms" value="false"/>
+#                <entry key="CellStatsProber.spikeSoundEnabled" value="false"/>
+#                <entry key="ClusterBasedOpticalFlow.clusterSize" value="0.045"/>
+#                <entry key="ClusterBasedOpticalFlow.dontMergeEver" value="true"/>
+#                <entry key="ClusterBasedOpticalFlow.filterEnabled" value="false"/>
+#                <entry key="ClusterBasedOpticalFlow.mixingFactor" value="0.0034"/>
+#                <entry key="ClusterBasedOpticalFlow.pixelsPerBin" value="8"/>
+#                <entry key="ClusterBasedOpticalFlow.vectorScalingPixelsPerPPS" value="0.061391346"/>
+#                <entry key="CypressFX2Blank.defaultFirmwareBixFileForBlankDevice" value="..\..\devices\firmware\CypressFX2\firmware_FX2LP_DAViS_FX2V4\SBret10.bix"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPdBn.BitValueCoarse" value="1"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPdBn.BitValueFine" value="91"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPdBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPdBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPdBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPdBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuXBp.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuXBp.BitValueFine" value="80"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuXBp.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuXBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuXBp.Sex" value="P"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuXBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuYBp.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuYBp.BitValueFine" value="152"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuYBp.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuYBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuYBp.Sex" value="P"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AEPuYBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AERxEBn.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AERxEBn.BitValueFine" value="165"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AERxEBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AERxEBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AERxEBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.AERxEBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsCasEpc.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsCasEpc.BitValueFine" value="185"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsCasEpc.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsCasEpc.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsCasEpc.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsCasEpc.Type" value="CASCODE"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSF.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSF.BitValueFine" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSF.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSF.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSF.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSF.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSFBn.BitValueCoarse" value="1"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSFBn.BitValueFine" value="219"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSFBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSFBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSFBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.ApsROSFBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffBn.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffBn.BitValueFine" value="39"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffCasBnc.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffCasBnc.BitValueFine" value="115"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffCasBnc.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffCasBnc.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffCasBnc.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.DiffCasBnc.Type" value="CASCODE"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFRefrBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFRefrBn.BitValueFine" value="255"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFRefrBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFRefrBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFRefrBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFRefrBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFThrBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFThrBn.BitValueFine" value="255"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFThrBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFThrBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFThrBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.IFThrBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LcolTimeoutBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LcolTimeoutBn.BitValueFine" value="49"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LcolTimeoutBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LcolTimeoutBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LcolTimeoutBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LcolTimeoutBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LocalBufBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LocalBufBn.BitValueFine" value="164"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LocalBufBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LocalBufBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LocalBufBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.LocalBufBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OffBn.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OffBn.BitValueFine" value="0"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OffBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OffBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OffBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OffBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OnBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OnBn.BitValueFine" value="255"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OnBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OnBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OnBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.OnBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PadFollBn.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PadFollBn.BitValueFine" value="215"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PadFollBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PadFollBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PadFollBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PadFollBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PixInvBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PixInvBn.BitValueFine" value="129"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PixInvBn.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PixInvBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PixInvBn.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PixInvBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrBp.BitValueCoarse" value="5"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrBp.BitValueFine" value="58"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrBp.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrBp.Sex" value="P"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrCasBnc.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrCasBnc.BitValueFine" value="0"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrCasBnc.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrCasBnc.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrCasBnc.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrCasBnc.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrSFBp.BitValueCoarse" value="6"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrSFBp.BitValueFine" value="16"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrSFBp.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrSFBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrSFBp.Sex" value="P"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.PrSFBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.RefrBp.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.RefrBp.BitValueFine" value="25"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.RefrBp.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.RefrBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.RefrBp.Sex" value="P"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.RefrBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.apsOverflowLevel.BitValueCoarse" value="1"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.apsOverflowLevel.BitValueFine" value="253"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.apsOverflowLevel.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.apsOverflowLevel.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.apsOverflowLevel.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.apsOverflowLevel.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.biasBuffer.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.biasBuffer.BitValueFine" value="254"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.biasBuffer.Enabled" value="true"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.biasBuffer.LowCurrent" value="false"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.biasBuffer.Sex" value="N"/>
+#                <entry key="DAVIS240B.AddressedIPotCF.biasBuffer.Type" value="NORMAL"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSN.OperatingMode" value="ShiftedSource"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSN.RefValue" value="1"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSN.RegBitValue" value="33"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSN.VoltageLevel" value="SplitGate"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSP.OperatingMode" value="ShiftedSource"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSP.RefValue" value="1"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSP.RegBitValue" value="33"/>
+#                <entry key="DAVIS240B.ShiftedSourceBias.SSP.VoltageLevel" value="SplitGate"/>
+#                <entry key="DAVIS240B.autoshotThresholdEvents" value="0"/>
+#                <entry key="DAVIS240B.bgTabbedPaneSelectedIndex" value="0"/>
+#                <entry key="DAVIS240B.extTrigger" value="false"/>
+#                <entry key="DAVIS240B.hotPixelSuppression" value="false"/>
+#                <entry key="DAVIS240B.nArow" value="false"/>
+#                <entry key="DAVIS240B.nChipReset" value="true"/>
+#                <entry key="DAVIS240B.powerDown" value="false"/>
+#                <entry key="DAVIS240B.resetCalib" value="true"/>
+#                <entry key="DAVIS240B.resetTestpixel" value="true"/>
+#                <entry key="DAVIS240B.runAdc" value="true"/>
+#                <entry key="DAVIS240B.runCpld" value="true"/>
+#                <entry key="DAVIS240B.sbret10" value="false"/>
+#                <entry key="DAVIS240B.showIMU" value="true"/>
+#                <entry key="DAVIS240B.showImageHistogram" value="false"/>
+#                <entry key="DAVIS240B.syncTimestampMaster" value="true"/>
+#                <entry key="DAVIS240B.testPixAPSread" value="false"/>
+#                <entry key="DAVIS240B.testPixel" value="false"/>
+#                <entry key="DAVIS240B.typeNCalib" value="false"/>
+#                <entry key="DAVIS240B.typePCalib" value="false"/>
+#                <entry key="DAVIS240B.useAout" value="false"/>
+#                <entry key="DAVIS240B.useC" value="false"/>
+#                <entry key="DAVIS240C.AERnArow" value="false"/>
+#                <entry key="DAVIS240C.APS.ColumnSettle" value="30"/>
+#                <entry key="DAVIS240C.APS.Exposure" value="5042"/>
+#                <entry key="DAVIS240C.APS.FrameDelay" value="15100"/>
+#                <entry key="DAVIS240C.APS.GlobalShutter" value="true"/>
+#                <entry key="DAVIS240C.APS.NullSettle" value="3"/>
+#                <entry key="DAVIS240C.APS.ResetRead" value="true"/>
+#                <entry key="DAVIS240C.APS.ResetSettle" value="10"/>
+#                <entry key="DAVIS240C.APS.RowSettle" value="10"/>
+#                <entry key="DAVIS240C.APS.Run" value="true"/>
+#                <entry key="DAVIS240C.APS.WaitOnTransferStall" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPdBn.BitValueCoarse" value="1"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPdBn.BitValueFine" value="91"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPdBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPdBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPdBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPdBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuXBp.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuXBp.BitValueFine" value="80"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuXBp.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuXBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuXBp.Sex" value="P"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuXBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuYBp.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuYBp.BitValueFine" value="152"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuYBp.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuYBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuYBp.Sex" value="P"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AEPuYBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AERxEBn.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AERxEBn.BitValueFine" value="165"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AERxEBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AERxEBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AERxEBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.AERxEBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsCasEpc.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsCasEpc.BitValueFine" value="185"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsCasEpc.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsCasEpc.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsCasEpc.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsCasEpc.Type" value="CASCODE"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSF.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSF.BitValueFine" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSF.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSF.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSF.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSF.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSFBn.BitValueCoarse" value="1"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSFBn.BitValueFine" value="219"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSFBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSFBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSFBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.ApsROSFBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffBn.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffBn.BitValueFine" value="39"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffCasBnc.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffCasBnc.BitValueFine" value="115"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffCasBnc.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffCasBnc.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffCasBnc.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.DiffCasBnc.Type" value="CASCODE"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFRefrBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFRefrBn.BitValueFine" value="255"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFRefrBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFRefrBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFRefrBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFRefrBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFThrBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFThrBn.BitValueFine" value="255"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFThrBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFThrBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFThrBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.IFThrBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LcolTimeoutBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LcolTimeoutBn.BitValueFine" value="49"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LcolTimeoutBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LcolTimeoutBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LcolTimeoutBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LcolTimeoutBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LocalBufBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LocalBufBn.BitValueFine" value="164"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LocalBufBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LocalBufBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LocalBufBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.LocalBufBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OffBn.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OffBn.BitValueFine" value="0"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OffBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OffBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OffBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OffBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OnBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OnBn.BitValueFine" value="255"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OnBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OnBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OnBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.OnBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PadFollBn.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PadFollBn.BitValueFine" value="215"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PadFollBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PadFollBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PadFollBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PadFollBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PixInvBn.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PixInvBn.BitValueFine" value="173"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PixInvBn.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PixInvBn.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PixInvBn.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PixInvBn.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrBp.BitValueCoarse" value="5"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrBp.BitValueFine" value="58"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrBp.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrBp.Sex" value="P"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrCasBnc.BitValueCoarse" value="0"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrCasBnc.BitValueFine" value="0"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrCasBnc.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrCasBnc.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrCasBnc.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrCasBnc.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrSFBp.BitValueCoarse" value="6"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrSFBp.BitValueFine" value="16"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrSFBp.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrSFBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrSFBp.Sex" value="P"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.PrSFBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.RefrBp.BitValueCoarse" value="3"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.RefrBp.BitValueFine" value="25"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.RefrBp.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.RefrBp.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.RefrBp.Sex" value="P"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.RefrBp.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.apsOverflowLevel.BitValueCoarse" value="1"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.apsOverflowLevel.BitValueFine" value="255"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.apsOverflowLevel.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.apsOverflowLevel.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.apsOverflowLevel.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.apsOverflowLevel.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.biasBuffer.BitValueCoarse" value="2"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.biasBuffer.BitValueFine" value="254"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.biasBuffer.Enabled" value="true"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.biasBuffer.LowCurrent" value="false"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.biasBuffer.Sex" value="N"/>
+#                <entry key="DAVIS240C.AddressedIPotCF.biasBuffer.Type" value="NORMAL"/>
+#                <entry key="DAVIS240C.Chip.AERnArow" value="false"/>
+#                <entry key="DAVIS240C.Chip.AnalogMux0" value="0"/>
+#                <entry key="DAVIS240C.Chip.AnalogMux1" value="0"/>
+#                <entry key="DAVIS240C.Chip.AnalogMux2" value="0"/>
+#                <entry key="DAVIS240C.Chip.BiasMux0" value="0"/>
+#                <entry key="DAVIS240C.Chip.DigitalMux0" value="0"/>
+#                <entry key="DAVIS240C.Chip.DigitalMux1" value="0"/>
+#                <entry key="DAVIS240C.Chip.DigitalMux2" value="0"/>
+#                <entry key="DAVIS240C.Chip.DigitalMux3" value="0"/>
+#                <entry key="DAVIS240C.Chip.ResetCalibNeuron" value="true"/>
+#                <entry key="DAVIS240C.Chip.ResetTestPixel" value="true"/>
+#                <entry key="DAVIS240C.Chip.SpecialPixelControl" value="false"/>
+#                <entry key="DAVIS240C.Chip.TypeNCalibNeuron" value="false"/>
+#                <entry key="DAVIS240C.Chip.UseAOut" value="false"/>
+#                <entry key="DAVIS240C.DVS.AckDelayColumn" value="0"/>
+#                <entry key="DAVIS240C.DVS.AckDelayRow" value="4"/>
+#                <entry key="DAVIS240C.DVS.AckExtensionColumn" value="0"/>
+#                <entry key="DAVIS240C.DVS.AckExtensionRow" value="1"/>
+#                <entry key="DAVIS240C.DVS.ExternalAERControl" value="false"/>
+#                <entry key="DAVIS240C.DVS.FilterBackgroundActivity" value="false"/>
+#                <entry key="DAVIS240C.DVS.FilterBackgroundActivityDeltaTime" value="20000"/>
+#                <entry key="DAVIS240C.DVS.FilterRowOnlyEvents" value="true"/>
+#                <entry key="DAVIS240C.DVS.Run" value="true"/>
+#                <entry key="DAVIS240C.DVS.WaitOnTransferStall" value="false"/>
+#                <entry key="DAVIS240C.ExtInput.DetectFallingEdges" value="false"/>
+#                <entry key="DAVIS240C.ExtInput.DetectPulseLength" value="120"/>
+#                <entry key="DAVIS240C.ExtInput.DetectPulsePolarity" value="true"/>
+#                <entry key="DAVIS240C.ExtInput.DetectPulses" value="true"/>
+#                <entry key="DAVIS240C.ExtInput.DetectRisingEdges" value="false"/>
+#                <entry key="DAVIS240C.ExtInput.GeneratePulseInterval" value="120"/>
+#                <entry key="DAVIS240C.ExtInput.GeneratePulseLength" value="60"/>
+#                <entry key="DAVIS240C.ExtInput.GeneratePulsePolarity" value="false"/>
+#                <entry key="DAVIS240C.ExtInput.GenerateUseCustomSignal" value="false"/>
+#                <entry key="DAVIS240C.ExtInput.RunDetector" value="false"/>
+#                <entry key="DAVIS240C.ExtInput.RunGenerator" value="false"/>
+#                <entry key="DAVIS240C.GlobalShutter" value="true"/>
+#                <entry key="DAVIS240C.IMU.AccelFullScale" value="2"/>
+#                <entry key="DAVIS240C.IMU.AccelScale" value="ImuAccelScaleG8"/>
+#                <entry key="DAVIS240C.IMU.DigitalLowPassFilter" value="1"/>
+#                <entry key="DAVIS240C.IMU.GyroFullScale" value="2"/>
+#                <entry key="DAVIS240C.IMU.GyroScale" value="GyroFullScaleDegPerSec1000"/>
+#                <entry key="DAVIS240C.IMU.LPCycle" value="false"/>
+#                <entry key="DAVIS240C.IMU.LPWakeup" value="1"/>
+#                <entry key="DAVIS240C.IMU.Run" value="true"/>
+#                <entry key="DAVIS240C.IMU.SampleRateDivider" value="0"/>
+#                <entry key="DAVIS240C.IMU.TempStandby" value="false"/>
+#                <entry key="DAVIS240C.IMU.displayEnabled" value="true"/>
+#                <entry key="DAVIS240C.Masterbias.internalResistorUsed" value="false"/>
+#                <entry key="DAVIS240C.Masterbias.rint" value="46000.0"/>
+#                <entry key="DAVIS240C.Masterbias.rx" value="8200.0"/>
+#                <entry key="DAVIS240C.Mux.DropAPSOnTransferStall" value="false"/>
+#                <entry key="DAVIS240C.Mux.DropDVSOnTransferStall" value="true"/>
+#                <entry key="DAVIS240C.Mux.DropExtInputOnTransferStall" value="true"/>
+#                <entry key="DAVIS240C.Mux.DropIMUOnTransferStall" value="false"/>
+#                <entry key="DAVIS240C.Mux.ForceChipBiasEnable" value="false"/>
+#                <entry key="DAVIS240C.ResetCalibNeuron" value="true"/>
+#                <entry key="DAVIS240C.ResetTestPixel" value="true"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSN.OperatingMode" value="ShiftedSource"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSN.RefValue" value="1"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSN.RegBitValue" value="33"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSN.VoltageLevel" value="SplitGate"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSP.OperatingMode" value="ShiftedSource"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSP.RefValue" value="1"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSP.RegBitValue" value="33"/>
+#                <entry key="DAVIS240C.ShiftedSourceBias.SSP.VoltageLevel" value="SplitGate"/>
+#                <entry key="DAVIS240C.SpecialPixelControl" value="false"/>
+#                <entry key="DAVIS240C.TypeNCalibNeuron" value="false"/>
+#                <entry key="DAVIS240C.USB.EarlyPacketDelay" value="8"/>
+#                <entry key="DAVIS240C.UseAOut" value="false"/>
+#                <entry key="DAVIS240C.VideoControl.autoWhiteBalance" value="true"/>
+#                <entry key="DAVIS240C.VideoControl.colorCorrection" value="true"/>
+#                <entry key="DAVIS240C.VideoControl.displayEvents" value="true"/>
+#                <entry key="DAVIS240C.VideoControl.displayFrames" value="true"/>
+#                <entry key="DAVIS240C.VideoControl.separateAPSByColor" value="false"/>
+#                <entry key="DAVIS240C.autoshotThresholdEvents" value="0"/>
+#                <entry key="DAVIS240C.bgTabbedPaneSelectedIndex" value="0"/>
+#                <entry key="DAVIS240C.extTrigger" value="false"/>
+#                <entry key="DAVIS240C.hotPixelSuppression" value="false"/>
+#                <entry key="DAVIS240C.nArow" value="false"/>
+#                <entry key="DAVIS240C.nChipReset" value="true"/>
+#                <entry key="DAVIS240C.powerDown" value="false"/>
+#                <entry key="DAVIS240C.resetCalib" value="true"/>
+#                <entry key="DAVIS240C.resetTestpixel" value="true"/>
+#                <entry key="DAVIS240C.runAdc" value="true"/>
+#                <entry key="DAVIS240C.runCpld" value="true"/>
+#                <entry key="DAVIS240C.sbret10" value="false"/>
+#                <entry key="DAVIS240C.showIMU" value="true"/>
+#                <entry key="DAVIS240C.showImageHistogram" value="false"/>
+#                <entry key="DAVIS240C.syncTimestampMaster" value="true"/>
+#                <entry key="DAVIS240C.testPixAPSread" value="false"/>
+#                <entry key="DAVIS240C.testPixel" value="false"/>
+#                <entry key="DAVIS240C.typeNCalib" value="false"/>
+#                <entry key="DAVIS240C.typePCalib" value="false"/>
+#                <entry key="DAVIS240C.useAout" value="false"/>
+#                <entry key="DAVIS240C.useC" value="false"/>
+#                <entry key="DAViS240.bgTabbedPaneSelectedIndex" value="0"/>
+#                <entry key="DAViS240.showImageHistogram" value="true"/>
+#                <entry key="Davis208PixelParade.AERnArow" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ADCcompBp.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ADCcompBp.BitValueFine" value="20"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ADCcompBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ADCcompBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ADCcompBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ADCcompBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPdBn.BitValueCoarse" value="1"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPdBn.BitValueFine" value="84"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPdBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPdBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPdBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPdBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuXBp.BitValueCoarse" value="3"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuXBp.BitValueFine" value="80"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuXBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuXBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuXBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuXBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuYBp.BitValueCoarse" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuYBp.BitValueFine" value="152"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuYBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuYBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuYBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.AEPuYBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ApsROSFBn.BitValueCoarse" value="1"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ApsROSFBn.BitValueFine" value="219"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ApsROSFBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ApsROSFBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ApsROSFBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ApsROSFBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.BiasBuffer.BitValueCoarse" value="1"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.BiasBuffer.BitValueFine" value="255"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.BiasBuffer.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.BiasBuffer.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.BiasBuffer.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.BiasBuffer.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2N.BitValueCoarse" value="7"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2N.BitValueFine" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2N.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2N.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2N.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2N.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2P.BitValueCoarse" value="7"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2P.BitValueFine" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2P.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2P.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2P.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk2P.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk3N.BitValueCoarse" value="7"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk3N.BitValueFine" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk3N.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk3N.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk3N.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk3N.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk4N.BitValueCoarse" value="7"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk4N.BitValueFine" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk4N.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk4N.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk4N.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.Blk4N.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ColSelLowBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ColSelLowBn.BitValueFine" value="116"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ColSelLowBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ColSelLowBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ColSelLowBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ColSelLowBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DACBufBp.BitValueCoarse" value="1"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DACBufBp.BitValueFine" value="60"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DACBufBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DACBufBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DACBufBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DACBufBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DiffBn.BitValueCoarse" value="3"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DiffBn.BitValueFine" value="39"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DiffBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DiffBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DiffBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.DiffBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFRefrBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFRefrBn.BitValueFine" value="255"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFRefrBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFRefrBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFRefrBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFRefrBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFThrBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFThrBn.BitValueFine" value="255"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFThrBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFThrBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFThrBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.IFThrBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LcolTimeoutBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LcolTimeoutBn.BitValueFine" value="49"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LcolTimeoutBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LcolTimeoutBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LcolTimeoutBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LcolTimeoutBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LocalBufBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LocalBufBn.BitValueFine" value="164"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LocalBufBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LocalBufBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LocalBufBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.LocalBufBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OffBn.BitValueCoarse" value="3"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OffBn.BitValueFine" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OffBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OffBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OffBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OffBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OnBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OnBn.BitValueFine" value="255"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OnBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OnBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OnBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.OnBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PadFollBn.BitValueCoarse" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PadFollBn.BitValueFine" value="208"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PadFollBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PadFollBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PadFollBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PadFollBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PixInvBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PixInvBn.BitValueFine" value="129"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PixInvBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PixInvBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PixInvBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PixInvBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrBp.BitValueCoarse" value="5"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrBp.BitValueFine" value="58"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrSFBp.BitValueCoarse" value="6"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrSFBp.BitValueFine" value="16"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrSFBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrSFBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrSFBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.PrSFBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ReadoutBufBp.BitValueCoarse" value="1"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ReadoutBufBp.BitValueFine" value="20"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ReadoutBufBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ReadoutBufBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ReadoutBufBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.ReadoutBufBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefSsbxBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefSsbxBn.BitValueFine" value="208"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefSsbxBn.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefSsbxBn.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefSsbxBn.Sex" value="N"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefSsbxBn.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefrBp.BitValueCoarse" value="3"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefrBp.BitValueFine" value="25"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefrBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefrBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefrBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RefrBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RegBiasBp.BitValueCoarse" value="0"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RegBiasBp.BitValueFine" value="255"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RegBiasBp.Enabled" value="true"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RegBiasBp.LowCurrent" value="false"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RegBiasBp.Sex" value="P"/>
+#                <entry key="Davis208PixelParade.AddressedIPotCF.RegBiasBp.Type" value="NORMAL"/>
+#                <entry key="Davis208PixelParade.ResetCalibNeuron" value="true"/>
+#                <entry key="Davis208PixelParade.ResetTestPixel" value="true"/>
+#                <entry key="Davis208PixelParade.SelBiasRefxD" value="true"/>
+#                <entry key="Davis208PixelParade.SelHpxD" value="true"/>
+#                <entry key="Davis208PixelParade.SelPosFbxD" value="true"/>
+#                <entry key="Davis208PixelParade.SelPreAmpAvgxD" value="false"/>
+#                <entry key="Davis208PixelParade.SelSensexD" value="true"/>
+#                <entry key="Davis208PixelParade.SelectGrayCounter" value="true"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ADC_RefHigh.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ADC_RefHigh.VdacBitValue" value="63"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ADC_RefLow.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ADC_RefLow.VdacBitValue" value="0"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.AdcTestVoltageAI.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.AdcTestVoltageAI.VdacBitValue" value="21"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ApsCas.BufBitValue" value="6"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ApsCas.VdacBitValue" value="21"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.RefSsbxBv.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.RefSsbxBv.VdacBitValue" value="12"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ResetHpxBv.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.ResetHpxBv.VdacBitValue" value="63"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSN.OperatingMode" value="ShiftedSource"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSN.RefValue" value="0"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSN.RegBitValue" value="63"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSN.VoltageLevel" value="SplitGate"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSP.OperatingMode" value="ShiftedSource"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSP.RefValue" value="0"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSP.RegBitValue" value="63"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.SSP.VoltageLevel" value="SplitGate"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.Unconnected.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.Unconnected.VdacBitValue" value="0"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.apsOverflowLevel.BufBitValue" value="7"/>
+#                <entry key="Davis208PixelParade.ShiftedSourceBias.apsOverflowLevel.VdacBitValue" value="0"/>
+#                <entry key="Davis208PixelParade.TestADC" value="false"/>
+#                <entry key="Davis208PixelParade.TypeNCalibNeuron" value="false"/>
+#                <entry key="Davis208PixelParade.UseAOut" value="false"/>
+#                <entry key="Davis208PixelParade.nChipReset" value="true"/>
+#                <entry key="Davis208PixelParade.powerDown" value="false"/>
+#                <entry key="Davis208PixelParade.runAdc" value="true"/>
+#                <entry key="Davis208PixelParade.runCpld" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.ADCcompBp.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.ADCcompBp.BitValueFine" value="44"/>
+#                <entry key="Davis346B.AddressedIPotCF.ADCcompBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.ADCcompBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.ADCcompBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.ADCcompBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPdBn.BitValueCoarse" value="1"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPdBn.BitValueFine" value="189"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPdBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPdBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPdBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPdBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuXBp.BitValueCoarse" value="3"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuXBp.BitValueFine" value="100"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuXBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuXBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuXBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuXBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuYBp.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuYBp.BitValueFine" value="176"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuYBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuYBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuYBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.AEPuYBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.ApsROSFBn.BitValueCoarse" value="1"/>
+#                <entry key="Davis346B.AddressedIPotCF.ApsROSFBn.BitValueFine" value="210"/>
+#                <entry key="Davis346B.AddressedIPotCF.ApsROSFBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.ApsROSFBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.ApsROSFBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.ApsROSFBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1N.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1N.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1N.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1N.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1N.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1N.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1P.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1P.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1P.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1P.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1P.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk1P.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2N.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2N.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2N.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2N.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2N.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2N.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2P.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2P.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2P.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2P.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2P.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk2P.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk3N.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk3N.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk3N.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk3N.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk3N.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk3N.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk4N.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk4N.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk4N.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk4N.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk4N.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.Blk4N.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.ColSelLowBn.BitValueCoarse" value="7"/>
+#                <entry key="Davis346B.AddressedIPotCF.ColSelLowBn.BitValueFine" value="3"/>
+#                <entry key="Davis346B.AddressedIPotCF.ColSelLowBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.ColSelLowBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.ColSelLowBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.ColSelLowBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.DACBufBp.BitValueCoarse" value="1"/>
+#                <entry key="Davis346B.AddressedIPotCF.DACBufBp.BitValueFine" value="91"/>
+#                <entry key="Davis346B.AddressedIPotCF.DACBufBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.DACBufBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.DACBufBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.DACBufBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.DiffBn.BitValueCoarse" value="3"/>
+#                <entry key="Davis346B.AddressedIPotCF.DiffBn.BitValueFine" value="54"/>
+#                <entry key="Davis346B.AddressedIPotCF.DiffBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.DiffBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.DiffBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.DiffBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFRefrBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFRefrBn.BitValueFine" value="255"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFRefrBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFRefrBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFRefrBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFRefrBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFThrBn.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFThrBn.BitValueFine" value="255"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFThrBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFThrBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFThrBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.IFThrBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.LcolTimeoutBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.LcolTimeoutBn.BitValueFine" value="63"/>
+#                <entry key="Davis346B.AddressedIPotCF.LcolTimeoutBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.LcolTimeoutBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.LcolTimeoutBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.LcolTimeoutBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.LocalBufBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.LocalBufBn.BitValueFine" value="177"/>
+#                <entry key="Davis346B.AddressedIPotCF.LocalBufBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.LocalBufBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.LocalBufBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.LocalBufBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.OffBn.BitValueCoarse" value="3"/>
+#                <entry key="Davis346B.AddressedIPotCF.OffBn.BitValueFine" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.OffBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.OffBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.OffBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.OffBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.OnBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.OnBn.BitValueFine" value="255"/>
+#                <entry key="Davis346B.AddressedIPotCF.OnBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.OnBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.OnBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.OnBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.PadFollBn.BitValueCoarse" value="0"/>
+#                <entry key="Davis346B.AddressedIPotCF.PadFollBn.BitValueFine" value="204"/>
+#                <entry key="Davis346B.AddressedIPotCF.PadFollBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.PadFollBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.PadFollBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.PadFollBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.PixInvBn.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.PixInvBn.BitValueFine" value="142"/>
+#                <entry key="Davis346B.AddressedIPotCF.PixInvBn.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.PixInvBn.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.PixInvBn.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.PixInvBn.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrBp.BitValueCoarse" value="5"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrBp.BitValueFine" value="84"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrSFBp.BitValueCoarse" value="6"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrSFBp.BitValueFine" value="26"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrSFBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrSFBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrSFBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.PrSFBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.ReadoutBufBP.BitValueCoarse" value="1"/>
+#                <entry key="Davis346B.AddressedIPotCF.ReadoutBufBP.BitValueFine" value="30"/>
+#                <entry key="Davis346B.AddressedIPotCF.ReadoutBufBP.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.ReadoutBufBP.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.ReadoutBufBP.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.ReadoutBufBP.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.RefrBp.BitValueCoarse" value="3"/>
+#                <entry key="Davis346B.AddressedIPotCF.RefrBp.BitValueFine" value="51"/>
+#                <entry key="Davis346B.AddressedIPotCF.RefrBp.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.RefrBp.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.RefrBp.Sex" value="P"/>
+#                <entry key="Davis346B.AddressedIPotCF.RefrBp.Type" value="NORMAL"/>
+#                <entry key="Davis346B.AddressedIPotCF.biasBuffer.BitValueCoarse" value="2"/>
+#                <entry key="Davis346B.AddressedIPotCF.biasBuffer.BitValueFine" value="236"/>
+#                <entry key="Davis346B.AddressedIPotCF.biasBuffer.Enabled" value="true"/>
+#                <entry key="Davis346B.AddressedIPotCF.biasBuffer.LowCurrent" value="false"/>
+#                <entry key="Davis346B.AddressedIPotCF.biasBuffer.Sex" value="N"/>
+#                <entry key="Davis346B.AddressedIPotCF.biasBuffer.Type" value="NORMAL"/>
+#                <entry key="Davis346B.ShiftedSourceBias.ADC_RefHigh.BufBitValue" value="7"/>
+#                <entry key="Davis346B.ShiftedSourceBias.ADC_RefHigh.VdacBitValue" value="26"/>
+#                <entry key="Davis346B.ShiftedSourceBias.ADC_RefLow.BufBitValue" value="7"/>
+#                <entry key="Davis346B.ShiftedSourceBias.ADC_RefLow.VdacBitValue" value="1"/>
+#                <entry key="Davis346B.ShiftedSourceBias.AdcTestVoltagexAI.BufBitValue" value="7"/>
+#                <entry key="Davis346B.ShiftedSourceBias.AdcTestVoltagexAI.VdacBitValue" value="0"/>
+#                <entry key="Davis346B.ShiftedSourceBias.ApsCas.BufBitValue" value="6"/>
+#                <entry key="Davis346B.ShiftedSourceBias.ApsCas.VdacBitValue" value="20"/>
+#                <entry key="Davis346B.ShiftedSourceBias.BlkV1.BufBitValue" value="7"/>
+#                <entry key="Davis346B.ShiftedSourceBias.BlkV1.VdacBitValue" value="0"/>
+#                <entry key="Davis346B.ShiftedSourceBias.BlkV2.BufBitValue" value="7"/>
+#                <entry key="Davis346B.ShiftedSourceBias.BlkV2.VdacBitValue" value="0"/>
+#                <entry key="Davis346B.ShiftedSourceBias.BlkV3.BufBitValue" value="7"/>
+#                <entry key="Davis346B.ShiftedSourceBias.BlkV3.VdacBitValue" value="0"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSN.OperatingMode" value="ShiftedSource"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSN.RefValue" value="2"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSN.RegBitValue" value="63"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSN.VoltageLevel" value="SplitGate"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSP.OperatingMode" value="ShiftedSource"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSP.RefValue" value="1"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSP.RegBitValue" value="63"/>
+#                <entry key="Davis346B.ShiftedSourceBias.SSP.VoltageLevel" value="SplitGate"/>
+#                <entry key="Davis346B.ShiftedSourceBias.apsOverflowLevel.BufBitValue" value="6"/>
+#                <entry key="Davis346B.ShiftedSourceBias.apsOverflowLevel.VdacBitValue" value="23"/>
+#                <entry key="Davis346B.hotPixelSuppression" value="false"/>
+#                <entry key="Davis346B.nArow" value="false"/>
+#                <entry key="Davis346B.nChipReset" value="true"/>
+#                <entry key="Davis346B.powerDown" value="false"/>
+#                <entry key="Davis346B.resetCalib" value="true"/>
+#                <entry key="Davis346B.resetTestpixel" value="true"/>
+#                <entry key="Davis346B.runAdc" value="true"/>
+#                <entry key="Davis346B.runCpld" value="true"/>
+#                <entry key="Davis346B.typeNCalib" value="false"/>
+#                <entry key="Davis346B.useAout" value="true"/>
+#                <entry key="DavisBaseCamera.bgTabbedPaneSelectedIndex" value="0"/>
+#                <entry key="DavisDeepLearnCnnProcessor.filterEnabled" value="true"/>
+#                <entry key="DavisFrameAviWriter.filterEnabled" value="true"/>
+#                <entry key="DavisFrameAviWriter.lastFileName" value="C:\Users\tobi\Documents\jAER.avi"/>
+#                <entry key="DavisRGBW640.AERnArow" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ADCcompBp.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ADCcompBp.BitValueFine" value="20"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ADCcompBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ADCcompBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ADCcompBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ADCcompBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPdBn.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPdBn.BitValueFine" value="91"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPdBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPdBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPdBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPdBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuXBp.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuXBp.BitValueFine" value="80"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuXBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuXBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuXBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuXBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuYBp.BitValueCoarse" value="0"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuYBp.BitValueFine" value="152"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuYBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuYBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuYBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.AEPuYBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ApsROSFBn.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ApsROSFBn.BitValueFine" value="219"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ApsROSFBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ApsROSFBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ApsROSFBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ApsROSFBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayBiasBufferBn.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayBiasBufferBn.BitValueFine" value="20"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayBiasBufferBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayBiasBufferBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayBiasBufferBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayBiasBufferBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayLogicBufferBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayLogicBufferBn.BitValueFine" value="20"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayLogicBufferBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayLogicBufferBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayLogicBufferBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ArrayLogicBufferBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.BiasBuffer.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.BiasBuffer.BitValueFine" value="251"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.BiasBuffer.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.BiasBuffer.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.BiasBuffer.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.BiasBuffer.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1N.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1N.BitValueFine" value="0"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1N.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1N.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1N.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1N.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1P.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1P.BitValueFine" value="0"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1P.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1P.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1P.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk1P.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk2P.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk2P.BitValueFine" value="0"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk2P.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk2P.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk2P.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.Blk2P.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DACBufBp.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DACBufBp.BitValueFine" value="60"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DACBufBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DACBufBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DACBufBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DACBufBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DiffBn.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DiffBn.BitValueFine" value="39"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DiffBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DiffBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DiffBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.DiffBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.FalltimeBn.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.FalltimeBn.BitValueFine" value="20"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.FalltimeBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.FalltimeBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.FalltimeBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.FalltimeBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFRefrBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFRefrBn.BitValueFine" value="255"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFRefrBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFRefrBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFRefrBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFRefrBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFThrBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFThrBn.BitValueFine" value="255"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFThrBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFThrBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFThrBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.IFThrBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LcolTimeoutBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LcolTimeoutBn.BitValueFine" value="49"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LcolTimeoutBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LcolTimeoutBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LcolTimeoutBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LcolTimeoutBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LocalBufBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LocalBufBn.BitValueFine" value="164"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LocalBufBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LocalBufBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LocalBufBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.LocalBufBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OffBn.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OffBn.BitValueFine" value="0"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OffBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OffBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OffBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OffBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OnBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OnBn.BitValueFine" value="255"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OnBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OnBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OnBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.OnBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PadFollBn.BitValueCoarse" value="0"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PadFollBn.BitValueFine" value="215"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PadFollBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PadFollBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PadFollBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PadFollBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PixInvBn.BitValueCoarse" value="2"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PixInvBn.BitValueFine" value="129"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PixInvBn.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PixInvBn.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PixInvBn.Sex" value="N"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PixInvBn.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrBp.BitValueCoarse" value="5"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrBp.BitValueFine" value="58"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrSFBp.BitValueCoarse" value="6"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrSFBp.BitValueFine" value="16"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrSFBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrSFBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrSFBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.PrSFBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ReadoutBufBp.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ReadoutBufBp.BitValueFine" value="20"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ReadoutBufBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ReadoutBufBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ReadoutBufBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.ReadoutBufBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RefrBp.BitValueCoarse" value="3"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RefrBp.BitValueFine" value="25"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RefrBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RefrBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RefrBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RefrBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RisetimeBp.BitValueCoarse" value="1"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RisetimeBp.BitValueFine" value="20"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RisetimeBp.Enabled" value="true"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RisetimeBp.LowCurrent" value="false"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RisetimeBp.Sex" value="P"/>
+#                <entry key="DavisRGBW640.AddressedIPotCF.RisetimeBp.Type" value="NORMAL"/>
+#                <entry key="DavisRGBW640.AdjustOVG1Lo" value="true"/>
+#                <entry key="DavisRGBW640.AdjustOVG2Lo" value="false"/>
+#                <entry key="DavisRGBW640.AdjustTX2OVG2Hi" value="false"/>
+#                <entry key="DavisRGBW640.ResetCalibNeuron" value="true"/>
+#                <entry key="DavisRGBW640.ResetTestPixel" value="true"/>
+#                <entry key="DavisRGBW640.SelectGrayCounter" value="true"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.ADCRefHigh.BufBitValue" value="7"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.ADCRefHigh.VdacBitValue" value="60"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.ADCRefLow.BufBitValue" value="7"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.ADCRefLow.VdacBitValue" value="1"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.ApsCasBpc.BufBitValue" value="6"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.ApsCasBpc.VdacBitValue" value="21"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.Gnd07.BufBitValue" value="6"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.Gnd07.VdacBitValue" value="13"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.OVG1Lo.BufBitValue" value="6"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.OVG1Lo.VdacBitValue" value="23"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.OVG2Lo.BufBitValue" value="0"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.OVG2Lo.VdacBitValue" value="0"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSN.OperatingMode" value="ShiftedSource"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSN.RefValue" value="2"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSN.RegBitValue" value="33"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSN.VoltageLevel" value="SplitGate"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSP.OperatingMode" value="TiedToRail"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSP.RefValue" value="1"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSP.RegBitValue" value="33"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.SSP.VoltageLevel" value="SplitGate"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.TX2OVG2Hi.BufBitValue" value="6"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.TX2OVG2Hi.VdacBitValue" value="63"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.VTestADC.BufBitValue" value="7"/>
+#                <entry key="DavisRGBW640.ShiftedSourceBias.VTestADC.VdacBitValue" value="21"/>
+#                <entry key="DavisRGBW640.TestADC" value="false"/>
+#                <entry key="DavisRGBW640.TypeNCalibNeuron" value="false"/>
+#                <entry key="DavisRGBW640.UseAOut" value="false"/>
+#                <entry key="DavisRGBW640.hotPixelSuppression" value="false"/>
+#                <entry key="DavisRGBW640.nArow" value="false"/>
+#                <entry key="DavisRGBW640.nChipReset" value="true"/>
+#                <entry key="DavisRGBW640.powerDown" value="false"/>
+#                <entry key="DavisRGBW640.resetCalib" value="true"/>
+#                <entry key="DavisRGBW640.resetTestpixel" value="true"/>
+#                <entry key="DavisRGBW640.runAdc" value="true"/>
+#                <entry key="DavisRGBW640.runCpld" value="true"/>
+#                <entry key="DavisRGBW640.typeNCalib" value="false"/>
+#                <entry key="DavisRGBW640.useAout" value="true"/>
+#                <entry key="DavisVideoContrastController.contrast" value="1.6500001"/>
+#                <entry key="DavisVideoContrastController.useAutoContrast" value="true"/>
+#                <entry key="DepressingSynapseFilter.filterEnabled" value="false"/>
+#                <entry key="DepressingSynapseFilter.tauMs" value="2785.9604"/>
+#                <entry key="DepressingSynapseFilter.weight" value="2.313778E-4"/>
+#                <entry key="DigitalOutputMux.BiasOutMux.selectedChannel" value="-1"/>
+#                <entry key="DigitalOutputMux.DigMux0.selectedChannel" value="-1"/>
+#                <entry key="DigitalOutputMux.DigMux1.selectedChannel" value="-1"/>
+#                <entry key="DigitalOutputMux.DigMux2.selectedChannel" value="-1"/>
+#                <entry key="DigitalOutputMux.DigMux3.selectedChannel" value="-1"/>
+#                <entry key="DirectionSelectiveFilter.excessSpeedRejectFactor" value="1"/>
+#                <entry key="DirectionSelectiveFilter.filterEnabled" value="false"/>
+#                <entry key="DirectionSelectiveFilter.jitterAmountPixels" value="1.7214754"/>
+#                <entry key="DirectionSelectiveFilter.maxDtThreshold" value="5587"/>
+#                <entry key="DirectionSelectiveFilter.minDtThreshold" value="228"/>
+#                <entry key="DirectionSelectiveFilter.ppsScale" value="0.02405087"/>
+#                <entry key="DirectionSelectiveFilter.searchDistance" value="4"/>
+#                <entry key="DirectionSelectiveFilter.showGlobalEnabled" value="false"/>
+#                <entry key="DirectionSelectiveFilter.showRawInputEnabled" value="false"/>
+#                <entry key="DirectionSelectiveFilter.showVectorsEnabled" value="true"/>
+#                <entry key="DirectionSelectiveFilter.speedControlEnabled" value="true"/>
+#                <entry key="DirectionSelectiveFilter.subSampleShift" value="0"/>
+#                <entry key="DirectionSelectiveFilter.useAvgDtEnabled" value="true"/>
+#                <entry key="DvsDirectionSelectiveFilter.filterEnabled" value="false"/>
+#                <entry key="EdgeConstructor.filterEnabled" value="true"/>
+#                <entry key="EdgeFragments.filterEnabled" value="false"/>
+#                <entry key="EventRateEstimator.eventRateTauMs" value="1.0094942"/>
+#                <entry key="EventRateEstimator.filterEnabled" value="false"/>
+#                <entry key="EventRateEstimator.maxRate" value="9523810.0"/>
+#                <entry key="EvolutionaryThrottleController.filterEnabled" value="true"/>
+#                <entry key="FaceDetectorConvNet.filterEnabled" value="false"/>
+#                <entry key="FilterChain.processingMode" value="RENDERING"/>
+#                <entry key="FilterChain.timeLimitEnabled" value="false"/>
+#                <entry key="FilterChain.timeLimitMs" value="10"/>
+#                <entry key="FilterChain.updateIntervalMs" value="1.0"/>
+#                <entry key="FilterFrame.filters" value="rO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAAIdwQAAAAIdAA5Y2gudW5pemguaW5pLmphZXIucHJvamVjdHMuZGF2aXMuZnJhbWVzLkFwc0ZyYW1lRXh0cmFjdG9ydAA1bmV0LnNmLmphZXIuZXZlbnRwcm9jZXNzaW5nLmZpbHRlci5BcHNOb2lzZVN0YXRpc3RpY3N0ADtuZXQuc2YuamFlci5ldmVudHByb2Nlc3NpbmcuZmlsdGVyLkJhY2tncm91bmRBY3Rpdml0eUZpbHRlcnQAQmNoLnVuaXpoLmluaS5qYWVyLnByb2plY3RzLmRhdmlzLmZyYW1lcy5BcHNGcmFtZUV4dHJhcG9sYXRpb25JU0NBU3QAMWV1LnZpc3VhbGl6ZS5pbmkuY29udm5ldC5WaXN1YWxpc2VTdGVlcmluZ0NvbnZOZXR0ACxldS52aXN1YWxpemUuaW5pLmNvbnZuZXQuRmFjZURldGVjdG9yQ29udk5ldHQAJ25ldC5zZi5qYWVyLmV2ZW50cHJvY2Vzc2luZy5maWx0ZXIuSW5mb3QAMm5ldC5zZi5qYWVyLmV2ZW50cHJvY2Vzc2luZy5maWx0ZXIuQ2VsbFN0YXRzUHJvYmVyeA=="/>
+#                <entry key="FilterFrame.lastFilterSelected" value="class eu.visualize.ini.convnet.VisualiseSteeringConvNet"/>
+#                <entry key="FrequencyDetectionCell.filterEnabled" value="false"/>
+#                <entry key="FullGaussianTracker.filterEnabled" value="false"/>
+#                <entry key="GaussianTracker.filterEnabled" value="false"/>
+#                <entry key="HotPixelFilter.HotPixelSet" value="rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAABtzcgA0ZXUuc2VlYmV0dGVyLmluaS5jaGlwcy5EQVZpUy5Ib3RQaXhlbEZpbHRlciRIb3RQaXhlbPtTxzoUKi/5AgAESQAHYWRkcmVzc0kABWNvdW50SQABeEkAAXl4cA1D+AAAAAAAAAAAsAAAADVzcQB+AAIrxQgAAAAAAAAAAJ8AAACvc3EAfgACE0ZYAAAAAAAAAACKAAAATXNxAH4AAhGJaAAAAAAAAAAAWQAAAEZzcQB+AAIADHgAAAAAAAAAACgAAAAAc3EAfgACAUzoAAAAAAAAAAAhAAAABXNxAH4AAh8MyAAAAAAAAAAAIwAAAHxzcQB+AAIZTcgAAAAAAAAAABMAAABlc3EAfgACGQ3AAAAAAAAAAAATAAAAZHNxAH4AAhjNuAAAAAAAAAAAFAAAAGNzcQB+AAIYzbAAAAAAAAAAABQAAABjc3EAfgACBI2IAAAAAAAAAAAXAAAAEnNxAH4AAgTNeAAAAAAAAAAAGAAAABNzcQB+AAIAzTgAAAAAAAAAABwAAAADc3EAfgACAU04AAAAAAAAAAAcAAAABXNxAH4AAgBOWAAAAAAAAAAACgAAAAFzcQB+AAIADkgAAAAAAAAAAAsAAAAAc3EAfgACAI4oAAAAAAAAAAANAAAAAnNxAH4AAgAOaAAAAAAAAAAACQAAAABzcQB+AAIADlgAAAAAAAAAAAoAAAAAc3EAfgACAE5IAAAAAAAAAAALAAAAAXNxAH4AAgBOOAAAAAAAAAAADAAAAAFzcQB+AAIAjjgAAAAAAAAAAAwAAAACc3EAfgACAM4oAAAAAAAAAAANAAAAA3NxAH4AAgDOGAAAAAAAAAAADgAAAANzcQB+AAIBDigAAAAAAAAAAA0AAAAEc3EAfgACAQ4YAAAAAAAAAAAOAAAABA=="/>
+#                <entry key="HotPixelFilter.filterEnabled" value="true"/>
+#                <entry key="HotPixelFilter.learnTimeMs" value="107"/>
+#                <entry key="HotPixelFilter.numHotPixels" value="22"/>
+#                <entry key="HotPixelFilter.showHotPixels" value="false"/>
+#                <entry key="HotPixelSupressor.HotPixelSet" value="rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAACBzcgA5ZXUuc2VlYmV0dGVyLmluaS5jaGlwcy5zYnJldDEwLkhvdFBpeGVsU3VwcmVzc29yJEhvdFBpeGVsXkZNlO9FccICAARJAAdhZGRyZXNzSQAFY291bnRJAAF4SQABeXhwEwd4AAAAAAAAAAB4AAAATHNxAH4AAgtOuAAAAAAAAAAABAAAAC1zcQB+AAIRDNAAAAAAAAAAACIAAABEc3EAfgACDIzIAAAAAAAAAAAjAAAAMnNxAH4AAgtO2AAAAAAAAAAAAgAAAC1zcQB+AAIGjJgAAAAAAAAAACYAAAAac3EAfgACDY1YAAAAAAAAAAAaAAAANnNxAH4AAhNHeAAAAAAAAAAAeAAAAE1zcQB+AAIQzpgAAAAAAAAAAAYAAABDc3EAfgACDE74AAAAAAAAAAAAAAAAMXNxAH4AAgAAAQAAAAAAAAAA7wAAAABzcQB+AAIMTtgAAAAAAAAAAAIAAAAxc3EAfgACEY4gAAAAAAAAAAANAAAARnNxAH4AAhDOOAAAAAAAAAAADAAAAENzcQB+AAIMDvgAAAAAAAAAAAAAAAAwc3EAfgACDA7YAAAAAAAAAAACAAAAMHNxAH4AAgNOKAAAAAAAAAAADQAAAA1zcQB+AAILTsgAAAAAAAAAAAMAAAAtc3EAfgACC07oAAAAAAAAAAABAAAALXNxAH4AAhKHeAAAAAAAAAAAeAAAAEpzcQB+AAIbgLgAAAAAAAAAAOQAAABuc3EAfgACDE7oAAAAAAAAAAABAAAAMXNxAH4AAgxOyAAAAAAAAAAAAwAAADFzcQB+AAIQzqgAAAAAAAAAAAUAAABDc3EAfgACDQrQAAAAAAAAAABCAAAANHNxAH4AAhEOeAAAAAAAAAAACAAAAERzcQB+AAIHjJgAAAAAAAAAACYAAAAec3EAfgACDA7oAAAAAAAAAAABAAAAMHNxAH4AAhJHeAAAAAAAAAAAeAAAAElzcQB+AAIaQ7gAAAAAAAAAALQAAABpc3EAfgACDU4QAAAAAAAAAAAOAAAANXNxAH4AAhDOaAAAAAAAAAAACQAAAEM="/>
+#                <entry key="HotPixelSupressor.baselineProbability" value="1.5237124E-4"/>
+#                <entry key="HotPixelSupressor.filterEnabled" value="false"/>
+#                <entry key="HotPixelSupressor.learnTimeMs" value="30"/>
+#                <entry key="HotPixelSupressor.numHotPixels" value="24"/>
+#                <entry key="HotPixelSupressor.showHotPixels" value="false"/>
+#                <entry key="HotPixelSupressor.thresholdEventRate" value="43219.35"/>
+#                <entry key="HumanVsComputerThrottleController.computerTrackHistogramFilePath" value="C:\Users\tobi\Documents\jAER_1.5\src\ch\unizh\ini\jaer\projects\virtualslotcar\resources\computer.hist"/>
+#                <entry key="HumanVsComputerThrottleController.filterEnabled" value="true"/>
+#                <entry key="HumanVsComputerThrottleController.humanTrackHistogramFilePath" value="C:\Users\tobi\Documents\jAER_1.5\src\ch\unizh\ini\jaer\projects\virtualslotcar\resources\human.hist"/>
+#                <entry key="HumanVsComputerThrottleController.trackFileName" value="C:\Users\tobi\Documents\jAER_1.5\src\ch\unizh\ini\jaer\projects\virtualslotcar\resources\eccv3.track"/>
+#                <entry key="IMU.displayEnabled" value="true"/>
+#                <entry key="ImuAccelScale" value="ImuAccelScaleG8"/>
+#                <entry key="ImuGyroScale" value="GyroFullScaleDegPerSec1000"/>
+#                <entry key="Info.absoluteTime" value="true"/>
+#                <entry key="Info.analogClock" value="false"/>
+#                <entry key="Info.date" value="false"/>
+#                <entry key="Info.digitalClock" value="false"/>
+#                <entry key="Info.eventRate" value="false"/>
+#                <entry key="Info.eventRateScaleMax" value="613913.56"/>
+#                <entry key="Info.filterEnabled" value="false"/>
+#                <entry key="Info.maxSamples" value="450"/>
+#                <entry key="Info.showRateTrace" value="true"/>
+#                <entry key="Info.timeScaling" value="false"/>
+#                <entry key="Info.useLocalTimeZone" value="true"/>
+#                <entry key="JaerAviWriter.filterEnabled" value="true"/>
+#                <entry key="JaerAviWriter.lastFileName" value="C:\Users\tobi\Documents\jAER.avi"/>
+#                <entry key="Masterbias.internalResistorUsed" value="false"/>
+#                <entry key="Masterbias.rint" value="46000.0"/>
+#                <entry key="Masterbias.rx" value="8200.0"/>
+#                <entry key="MedianTracker.filterEnabled" value="true"/>
+#                <entry key="MedianTracker.tauUs" value="16137"/>
+#                <entry key="MultiLineClusterTracker.clusterLifetimeIncreasesWithAge" value="true"/>
+#                <entry key="MultiLineClusterTracker.clusterLifetimeWithoutSupport" value="24069"/>
+#                <entry key="MultiLineClusterTracker.colorClustersDifferentlyEnabled" value="false"/>
+#                <entry key="MultiLineClusterTracker.eventBufferLength" value="13"/>
+#                <entry key="MultiLineClusterTracker.lengthEnabled" value="false"/>
+#                <entry key="MultiLineClusterTracker.maxNumClusters" value="17"/>
+#                <entry key="MultiLineClusterTracker.maxSegmentDt" value="11692"/>
+#                <entry key="MultiLineClusterTracker.maxSegmentLength" value="16"/>
+#                <entry key="MultiLineClusterTracker.minDistanceNormalized" value="0.01812906"/>
+#                <entry key="MultiLineClusterTracker.mixingFactorLength" value="0.007835263"/>
+#                <entry key="MultiLineClusterTracker.mixingFactorPosition" value="1.9398682E-5"/>
+#                <entry key="MultiLineClusterTracker.mixingFactorRho" value="0.0110249985"/>
+#                <entry key="MultiLineClusterTracker.mixingFactorTheta" value="0.13938662"/>
+#                <entry key="MultiLineClusterTracker.oriDiffAllowed" value="1"/>
+#                <entry key="MultiLineClusterTracker.renderInputEvents" value="false"/>
+#                <entry key="MultiLineClusterTracker.showAllClusters" value="true"/>
+#                <entry key="MultiLineClusterTracker.tauMs" value="55.160057"/>
+#                <entry key="MultiLineClusterTracker.thetaRadiusRad" value="0.66825926"/>
+#                <entry key="MultiLineClusterTracker.thresholdEventsForVisibleCluster" value="45"/>
+#                <entry key="MultiLineClusterTracker.weightLengthEnabled" value="false"/>
+#                <entry key="NoOpFilter.filterEnabled" value="false"/>
+#                <entry key="ObjectMotionCell.filterEnabled" value="false"/>
+#                <entry key="ObjectMotionCell.showSubunits" value="true"/>
+#                <entry key="ObjectMotionCell.subunitActivityBlobRadiusScale" value="0.78502727"/>
+#                <entry key="ObjectMotionCell.subunitDecayTimeconstantMs" value="4.3657465"/>
+#                <entry key="ObjectMotionCell.subunitSubsamplingBits" value="4"/>
+#                <entry key="Oscilloscope.captureType" value="EventNumber"/>
+#                <entry key="Oscilloscope.filterEnabled" value="true"/>
+#                <entry key="Oscilloscope.lengthOfTimeToCaptureUs" value="2870757"/>
+#                <entry key="Oscilloscope.numberOfEventsToCapture" value="24069"/>
+#                <entry key="Oscilloscope.playbackNumEvents" value="568"/>
+#                <entry key="Oscilloscope.playbackNumberOfCycles" value="1"/>
+#                <entry key="Oscilloscope.playbackTimeIntervalUs" value="3072"/>
+#                <entry key="Oscilloscope.playbackType" value="EventNumber"/>
+#                <entry key="Oscilloscope.triggerMode" value="Normal"/>
+#                <entry key="Oscilloscope.triggerType" value="BiasChange"/>
+#                <entry key="PairedEventLinearEdgeClusterTracker.filterEnabled" value="false"/>
+#                <entry key="PanTiltAimer.filterEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.aspectRatio" value="1.0"/>
+#                <entry key="RectangularClusterTracker.clusterLifetimeWithoutSupport" value="35561"/>
+#                <entry key="RectangularClusterTracker.clusterMassDecayTauUs" value="67054"/>
+#                <entry key="RectangularClusterTracker.clusterSize" value="0.048"/>
+#                <entry key="RectangularClusterTracker.colorClustersDifferentlyEnabled" value="true"/>
+#                <entry key="RectangularClusterTracker.dontMergeEver" value="false"/>
+#                <entry key="RectangularClusterTracker.dynamicAngleEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.dynamicSizeEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.enableClusterExitPurging" value="false"/>
+#                <entry key="RectangularClusterTracker.filterEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.filterEventsEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.highwayPerspectiveEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.initializeVelocityToAverage" value="true"/>
+#                <entry key="RectangularClusterTracker.maxNumClusters" value="10"/>
+#                <entry key="RectangularClusterTracker.mixingFactor" value="0.0072000003"/>
+#                <entry key="RectangularClusterTracker.numEventsStoredInCluster" value="100"/>
+#                <entry key="RectangularClusterTracker.pathLength" value="124"/>
+#                <entry key="RectangularClusterTracker.pathsEnabled" value="false"/>
+#                <entry key="RectangularClusterTracker.showAllClusters" value="false"/>
+#                <entry key="RectangularClusterTracker.showClusterEps" value="false"/>
+#                <entry key="RectangularClusterTracker.showClusterMass" value="false"/>
+#                <entry key="RectangularClusterTracker.showClusterNumber" value="false"/>
+#                <entry key="RectangularClusterTracker.showClusterRadius" value="false"/>
+#                <entry key="RectangularClusterTracker.showClusterVelocity" value="false"/>
+#                <entry key="RectangularClusterTracker.showPaths" value="true"/>
+#                <entry key="RectangularClusterTracker.thresholdEventsForVisibleCluster" value="331"/>
+#                <entry key="RectangularClusterTracker.thresholdMassForVisibleCluster" value="57"/>
+#                <entry key="RectangularClusterTracker.thresholdVelocityForVisibleCluster" value="0.0"/>
+#                <entry key="RectangularClusterTracker.useEllipticalClusters" value="false"/>
+#                <entry key="RectangularClusterTracker.useNearestCluster" value="true"/>
+#                <entry key="RectangularClusterTracker.useOffPolarityOnlyEnabled" value="true"/>
+#                <entry key="RectangularClusterTracker.useVelocity" value="false"/>
+#                <entry key="RectangularClusterTracker.vanishingPoint.x" value="NaN"/>
+#                <entry key="RectangularClusterTracker.vanishingPoint.y" value="NaN"/>
+#                <entry key="RectangularClusterTracker.velocityTauMs" value="307.15207"/>
+#                <entry key="RectangularClusterTracker.velocityVectorScaling" value="0.952381"/>
+#                <entry key="RectangularClusterTrackerWithUDPClusterOutput.filterEnabled" value="true"/>
+#                <entry key="RectangularClusterTrackerWithUDPClusterOutput.maxNumClusters" value="1"/>
+#                <entry key="RectangularClusterTrackerWithUDPClusterOutput.vanishingPoint.x" value="NaN"/>
+#                <entry key="RectangularClusterTrackerWithUDPClusterOutput.vanishingPoint.y" value="NaN"/>
+#                <entry key="RefractoryFilter.filterEnabled" value="false"/>
+#                <entry key="RefractoryFilter.refractoryPeriodUs" value="586"/>
+#                <entry key="RefractoryFilter.subsampleBy" value="0"/>
+#                <entry key="RotateFilter.filterEnabled" value="false"/>
+#                <entry key="RotateFilter.invertX" value="false"/>
+#                <entry key="RotateFilter.invertY" value="false"/>
+#                <entry key="RotateFilter.rotate90deg" value="false"/>
+#                <entry key="SimpleOrientationFilter.filterEnabled" value="false"/>
+#                <entry key="SimpleOrientationFilter.minDtThreshold" value="26762"/>
+#                <entry key="SimpleOrientationFilter.oriDiffThreshold" value="0.20776044"/>
+#                <entry key="SimpleOrientationFilter.oriHistoryEnabled" value="false"/>
+#                <entry key="SimpleOrientationFilter.passAllEvents" value="false"/>
+#                <entry key="SimpleOrientationFilter.searchDistance" value="3"/>
+#                <entry key="SimpleOrientationFilter.showGlobalEnabled" value="false"/>
+#                <entry key="SimpleOrientationFilter.showVectorsEnabled" value="true"/>
+#                <entry key="SimpleOrientationFilter.subSampleShift" value="2"/>
+#                <entry key="SimpleOrientationFilter.useAverageDtEnabled" value="false"/>
+#                <entry key="SimpleSpeedController.filterEnabled" value="true"/>
+#                <entry key="SlotCarRacer.controllerToUse" value="HumanVsComputerThrottleController"/>
+#                <entry key="SlotCarRacer.filterEnabled" value="false"/>
+#                <entry key="SlotCarRacer.maxThrottle" value="1.0"/>
+#                <entry key="SlotCarRacer.overriddenThrottleSetting" value="0.06578659"/>
+#                <entry key="SlotCarRacer.overrideThrottle" value="false"/>
+#                <entry key="SlotCarRacer.playBrakeSound" value="true"/>
+#                <entry key="SlotCarRacer.playThrottleSound" value="false"/>
+#                <entry key="SlowResponse.filterEnabled" value="true"/>
+#                <entry key="SmoothOpticalFlowLabeler.filterEnabled" value="false"/>
+#                <entry key="SpatioTemporalFusion.filterEnabled" value="true"/>
+#                <entry key="StatisticsCalculator.filterEnabled" value="false"/>
+#                <entry key="Steadicam.annotateEnclosedEnabled" value="false"/>
+#                <entry key="Steadicam.cornerFreqHz" value="0.1"/>
+#                <entry key="Steadicam.disableRotation" value="false"/>
+#                <entry key="Steadicam.disableTranslation" value="false"/>
+#                <entry key="Steadicam.filterEnabled" value="true"/>
+#                <entry key="Steadicam.flipContrast" value="true"/>
+#                <entry key="Steadicam.gainPanTiltServos" value="6.385466"/>
+#                <entry key="Steadicam.highpassTauMsRotation" value="1710.3384"/>
+#                <entry key="Steadicam.highpassTauMsTranslation" value="1215.506"/>
+#                <entry key="Steadicam.lensFocalLengthMm" value="4.5226784"/>
+#                <entry key="Steadicam.panOffset" value="0.29959917"/>
+#                <entry key="Steadicam.panTiltEnabled" value="false"/>
+#                <entry key="Steadicam.positionComputer" value="VORSensor"/>
+#                <entry key="Steadicam.rollOffset" value="0.7365175"/>
+#                <entry key="Steadicam.showAnnotation" value="true"/>
+#                <entry key="Steadicam.showTransformRectangle" value="true"/>
+#                <entry key="Steadicam.tiltOffset" value="-1.9631878"/>
+#                <entry key="Steadicam.transformResetLimitDegrees" value="30"/>
+#                <entry key="TrackDefineFilter.filterEnabled" value="false"/>
+#                <entry key="TrackHistogramFilter.erosionSize" value="0"/>
+#                <entry key="TrackHistogramFilter.filePath" value="C:\Users\tobi\Documents\jAER_1.5\src\ch\unizh\ini\jaer\projects\virtualslotcar\resources\human.hist"/>
+#                <entry key="TrackHistogramFilter.filterEnabled" value="false"/>
+#                <entry key="TrackHistogramFilter.lastFile" value="C:\Users\tobi\Documents\jAER_1.5\src\ch\unizh\ini\jaer\projects\virtualslotcar\resources\human.hist"/>
+#                <entry key="TrackHistogramFilter.showBitmap" value="true"/>
+#                <entry key="TrackHistogramFilter.showHistogram" value="true"/>
+#                <entry key="TrackHistogramFilter.threshold" value="18.140594"/>
+#                <entry key="TrackdefineFilter.displayTrack" value="true"/>
+#                <entry key="TrackdefineFilter.drawHist" value="true"/>
+#                <entry key="TrackdefineFilter.erosionSize" value="1"/>
+#                <entry key="TrackdefineFilter.filterEnabled" value="false"/>
+#                <entry key="TrackdefineFilter.histThresh" value="1.6243871"/>
+#                <entry key="TrackdefineFilter.lastFile" value="C:\Users\tobi\Documents\jAER_1.5\computer large track 1.track"/>
+#                <entry key="TrackdefineFilter.maxDistance" value="73.87274"/>
+#                <entry key="TrackdefineFilter.minDistance" value="2.2035983"/>
+#                <entry key="TrackdefineFilter.refineDistance" value="4.319189"/>
+#                <entry key="TrackdefineFilter.scalePointsCurvature" value="true"/>
+#                <entry key="TrackdefineFilter.stepSize" value="0.05"/>
+#                <entry key="VORSensorForSteadicam.filterEnabled" value="false"/>
+#                <entry key="VerticalObjectMotionCell.filterEnabled" value="false"/>
+#                <entry key="VideoControl.brightness" value="0.0"/>
+#                <entry key="VideoControl.contrast" value="1.8000001"/>
+#                <entry key="VideoControl.displayEvents" value="true"/>
+#                <entry key="VideoControl.displayFrames" value="true"/>
+#                <entry key="VideoControl.gamma" value="1.0"/>
+#                <entry key="VideoControl.separateAPSByColor" value="false"/>
+#                <entry key="VideoControl.useAutoContrast" value="false"/>
+#                <entry key="VisualiseSteeringConvNet.LCRNstep" value="0.051"/>
+#                <entry key="VisualiseSteeringConvNet.dvsMinEvents" value="5000"/>
+#                <entry key="VisualiseSteeringConvNet.filterEnabled" value="true"/>
+#                <entry key="VisualiseSteeringConvNet.forceNetworkOutpout" value="false"/>
+#                <entry key="VisualiseSteeringConvNet.forcedNetworkOutputValue" value="2"/>
+#                <entry key="VisualiseSteeringConvNet.host" value="192.168.1.161"/>
+#                <entry key="VisualiseSteeringConvNet.lastAPSNetXMLFilename" value="/home/summit/Dropbox/VisualisePredatorShare/26.02/steering_net-4c-s-2s-2c-s-2s-s.prototxt_jAER.xml"/>
+#                <entry key="VisualiseSteeringConvNet.lastDVSNetXMLFilename" value="C:\Users\tobi\Dropbox\Share Visualise INI\DVS Paintings\LCRN_DVS_noHotPixel_36x36_cnn2.xml"/>
+#                <entry key="VisualiseSteeringConvNet.measurePerformance" value="false"/>
+#                <entry key="VisualiseSteeringConvNet.port" value="13331"/>
+#                <entry key="VisualiseSteeringConvNet.processDVSTimeSlices" value="true"/>
+#                <entry key="VisualiseSteeringConvNet.sendUDPSteeringMessages" value="true"/>
+#                <entry key="VisualiseSteeringConvNet.showAnalogDecisionOutput" value="false"/>
+#                <entry key="VisualiseSteeringConvNet.showOutputAsBarChart" value="false"/>
+#                <entry key="VisualiseSteeringConvNet.softMaxOutput" value="true"/>
+#                <entry key="XYTypeFilter.endType" value="1"/>
+#                <entry key="XYTypeFilter.endX" value="139"/>
+#                <entry key="XYTypeFilter.endY" value="92"/>
+#                <entry key="XYTypeFilter.filterEnabled" value="false"/>
+#                <entry key="XYTypeFilter.invertEnabled" value="false"/>
+#                <entry key="XYTypeFilter.multiSelectionEnabled" value="false"/>
+#                <entry key="XYTypeFilter.startType" value="1"/>
+#                <entry key="XYTypeFilter.startX" value="134"/>
+#                <entry key="XYTypeFilter.startY" value="85"/>
+#                <entry key="XYTypeFilter.typeEnabled" value="true"/>
+#                <entry key="XYTypeFilter.xEnabled" value="true"/>
+#                <entry key="XYTypeFilter.yEnabled" value="true"/>
+#                <entry key="aeReaderFifoSize" value="32768"/>
+#                <entry key="aeReaderNumBuffers" value="4"/>
+#                <entry key="agcEnabled" value="false"/>
+#                <entry key="agcTauMs" value="1000.0"/>
+#                <entry key="apsIntensityGain" value="1"/>
+#                <entry key="apsIntensityOffset" value="0"/>
+#                <entry key="autoExposureEnabled" value="true"/>
+#                <entry key="autoResetEnabled" value="false"/>
+#                <entry key="class eu.seebetter.ini.chips.DAViS.DAVIS240B.preferredDisplayMethod" value="eu.seebetter.ini.chips.DAViS.DAVIS240B$DAVIS240BaseCameraDisplayMethod"/>
+#                <entry key="class eu.seebetter.ini.chips.DAViS.DAVIS240BaseCameraold.preferredDisplayMethod" value="eu.seebetter.ini.chips.DAViS.DAVIS240BaseCameraold$DAVIS240BaseCameraDisplayMethod"/>
+#                <entry key="class eu.seebetter.ini.chips.DAViS.DAVIS240C.preferredDisplayMethod" value="eu.seebetter.ini.chips.DAViS.DAVIS240C$DAVIS240BaseCameraDisplayMethod"/>
+#                <entry key="class eu.seebetter.ini.chips.davis.DAVIS240B.preferredDisplayMethod" value="eu.seebetter.ini.chips.davis.DavisBaseCamera$DavisDisplayMethod"/>
+#                <entry key="class eu.seebetter.ini.chips.davis.DAVIS240C.preferredDisplayMethod" value="eu.seebetter.ini.chips.davis.DavisBaseCamera$DavisDisplayMethod"/>
+#                <entry key="debugControls" value="false"/>
+#                <entry key="displayEvents" value="true"/>
+#                <entry key="displayFrames" value="true"/>
+#                <entry key="displayIntensity" value="true"/>
+#                <entry key="displayLogIntensityChangeEvents" value="true"/>
+#                <entry key="expDelta" value="0.094282396"/>
+#                <entry key="ignoreReadout" value="true"/>
+#                <entry key="invertADCvalues" value="false"/>
+#                <entry key="pidControllerEnabled" value="true"/>
+#                <entry key="showImageHistogram" value="true"/>
+#                <entry key="translateRowOnlyEvents" value="false"/>
+#                <entry key="underOverFractionThreshold" value="0.28141996"/>
+#                <entry key="useDVSExtrapolation" value="false"/>
+#                <entry key="useMismatchCorrection" value="true"/>
+#              </map>
+#              <node name="ch">
+#                <map/>
+#                <node name="unizh">
+#                  <map/>
+#                  <node name="ini">
+#                    <map/>
+#                    <node name="jaer">
+#                      <map/>
+#                      <node name="projects">
+#                        <map/>
+#                        <node name="davis">
+#                          <map/>
+#                          <node name="frames">
+#                            <map/>
+#                            <node name="ApsFrameExtrapolationISCAS">
+#                              <map>
+#                                <entry key="ApsFrameExtractor.logCompress" value="true"/>
+#                                <entry key="ApsFrameExtractor.logDecompress" value="true"/>
+#                              </map>
+#                            </node>
+#                          </node>
+#                        </node>
+#                      </node>
+#                    </node>
+#                  </node>
+#                </node>
+#              </node>
+#              <node name="eu">
+#                <map/>
+#                <node name="visualize">
+#                  <map/>
+#                  <node name="ini">
+#                    <map/>
+#                    <node name="convnet">
+#                      <map/>
+#                      <node name="FaceDetectorConvNet">
+#                        <map/>
+#                      </node>
+#                      <node name="VisualiseSteeringConvNet">
+#                        <map/>
+#                      </node>
+#                    </node>
+#                  </node>
+#                </node>
+#              </node>
+#              <node name="net">
+#                <map/>
+#                <node name="sf">
+#                  <map/>
+#                  <node name="jaer">
+#                    <map/>
+#                    <node name="eventprocessing">
+#                      <map/>
+#                      <node name="filter">
+#                        <map/>
+#                        <node name="ApsNoiseStatistics">
+#                          <map>
+#                            <entry key="ApsFrameExtractor.showAPSFrameDisplay" value="false"/>
+#                          </map>
+#                        </node>
+#                        <node name="Info">
+#                          <map/>
+#                        </node>
+#                      </node>
+#                    </node>
+#                  </node>
+#                </node>
+#              </node>
+#            </node>
+#          </node>
+#        </node>
+#      </node>
+#    </node>
+#  </root>
+#</preferences>
+#End of Preferences for this AEChip
+√Ä ~£°x` ~£°â  ~£°â– ~£°âG` ~£°âBP ~£°âé ~£°âá` ~£°âÉ  ~£°âÇ¯ ~£°â¡ ~£°ä( ~£°äI– ~£°ãé® ~£°ãÇÄ ~£°ãp ~£°í– ~£°íIÿ ~£°íG8 ~£°í† ~£°ìâË ~£°ìŒË ~£°ñ«P ~£°ñ«8 ~£°ñ¬` ~£°ñ¬H ~£°ñh ~£°öê ~£°ö( ~£°öBP ~£°õKê ~£°õB  ~£°õ@ ~£°õ¯ ~£°úË ~£°úá( ~£°ü Hà ~£°† E ~£°† ∞ ~£°†  ~£°† Å∏ ~£°† «@ ~£°° « ~£°°,âX ~£°°,Ç» ~£°°,√X ~£°°,¬@ ~£°°,Mê ~£°¢,B8 ~£°¢,– ~£°¢+I– ~£°¢+ÿ ~£°£+Äÿ ~£°£+¿∞ ~£°£)» ~£°∑)ê ~£°∑)` ~£°∑)p ~£°∑)‡ ~£°∑)‡ ~£°∑)M‡ ~£°∏)M0 ~£°∏)J  ~£°∏)F ~£°∏)E† ~£°∏)EÄ ~£°∏'Å ~£°π'Ä  ~£°π' ~£°Ω' ¯ ~£°Ω'E ~£°Ω'E† ~£°Ω'D  ~£°Ω'C∞ ~£°Ω(G( ~£°æ(` ~£°æ(P ~£°æ(» ~£°æ(»  ~£°æ(≈@ ~£°æ(¬  ~£°æ%F» ~£°¬%ò ~£°√%À∏ ~£°√%¿‡ ~£°√%¿ ~£°√%Ä‡ ~£°√&ã∏ ~£°ƒ&ä¿ ~£°ƒ&É0 ~£°ƒ&ÅP ~£°ƒ&Ä‡ ~£°ƒ&Äê ~£°ƒ&¿X ~£°ƒ&KË ~£°≈&K– ~£°≈&JH ~£°≈&C0 ~£°≈&C ~£°≈&A∞ ~£°≈&	H ~£°≈#N( ~£°∆#M‡ ~£°∆#KË ~£°∆#K¿ ~£°∆#J– ~£°∆#Hÿ ~£°∆#D® ~£°∆#A ~£°∆#@ò ~£°∆# ~£°«#® ~£°«#‡ ~£°«#X ~£°«#X ~£°«# h ~£°«# 8 ~£°«#ÕÄ ~£°»#ÀX ~£°»#»  ~£°»#¡` ~£°»#åh ~£°»#Å0 ~£°»#Ä– ~£°»#Äp ~£°»#Ä` ~£°»#ÄP ~£°»#Ä0 ~£°»$E» ~£°…$@  ~£°…$X ~£° $  ~£° $¯ ~£° $çË ~£° $çh ~£° $Üà ~£° $Ñ» ~£° $Å0 ~£° $Õ» ~£°À$≈ ~£°À$¡† ~£°À!åà ~£°À!ä( ~£°À!Öê ~£°À!«– ~£°Ã!≈h ~£°Ã!ƒ¯ ~£°Ã!ÿ ~£°Ã!à ~£°Ã!8 ~£°Ã! H ~£°Ã!H» ~£°Õ!H® ~£°Õ!GH ~£°Õ"Ã® ~£°Õ"Àx ~£°Õ" ( ~£°Õ"«∏ ~£°Õ"∆à ~£°Õ"∆0 ~£°Õ"≈X ~£°Õ"â` ~£°Œ"Ö∏ ~£°Œ"Åò ~£°Œ"Å8 ~£°Œ"Nx ~£°œ"Kà ~£°œ"I ~£°œ"H» ~£°œ"HH ~£°œ"Gh ~£°œ"X ~£°–" ~£°–"∞ ~£°–"Ë ~£°–"H ~£°–" ~£°–x ~£°–
+¿ ~£°–® ~£°–KX ~£°—ÀË ~£°—À¿ ~£°—ƒò ~£°—â ~£°“à‡ ~£°“àÄ ~£°“Å® ~£°“MÄ ~£°“Hh ~£°“X ~£°”	¿ ~£°”h ~£°”Àx ~£°”Ñò ~£°” ç† ~£°‘ ãà ~£°‘ ä® ~£°‘ Äp ~£°‘ ¿– ~£°‘ ¿¿ ~£°‘ ê ~£°’   ~£°’ K∞ ~£°’ J¿ ~£°’Õ ~£°’Àh ~£°’…0 ~£°’≈  ~£°’¿Ä ~£°’ä– ~£°÷Mê ~£°÷M ~£°÷F† ~£°÷Fê ~£°÷	0 ~£°◊ò ~£°◊® ~£°◊ÀX ~£°◊…¿ ~£°◊I∞ ~£°€MP ~£°€Aò ~£°€	∞ ~£°‹∆p ~£°‹∆` ~£°‹HX ~£°‡0 ~£°‡Üp ~£°‡∆p ~£°‡ãH ~£°·X ~£°‰K8 ~£°Ë	@ ~£°ËÑÿ ~£°ÏF‡ ~£°ÔD– ~£°ÔM  ~£°ˆ0 ~£°˝Õ ~£¢ç  ~£¢Öê ~£¢Ç† ~£¢¿ ~£¢
+à ~£¢J0 ~£¢ h ~£¢äx ~£¢ ~£¢@∞ ~£¢ò ~£¢@ ~£¢ ® ~£¢¡» ~£¢ 0 ~£¢   ~£¢¡– ~£¢p ~£¢ÀP ~£¢K@ ~£¢#@ ~£¢#@» ~£¢$@` ~£¢$– ~£¢$¿¯ ~£¢$Äê ~£¢$ã( ~£¢/ƒ  ~£¢/	¬ ~£¢G ~£¢Gäx ~£¢N«X ~£¢Q` ~£¢TJP ~£¢UG` ~£¢UG8 ~£¢\– ~£¢\ä  ~£¢\ÄË ~£¢\Õ¯ ~£¢]«` ~£¢]Nx ~£¢]HH ~£¢]G` ~£¢]
+( ~£¢]` ~£¢]H ~£¢]«P ~£¢^¬† ~£¢^¬x ~£¢^F ~£¢bê ~£¢bP ~£¢bÄ ~£¢bX ~£¢b«` ~£¢c«8 ~£¢c¬ò ~£¢céx ~£¢cX ~£¢j@ ~£¢jKp ~£¢jGP ~£¢jG8 ~£¢jáP ~£¢kÇ` ~£¢k«8 ~£¢o¬ ~£¢oÑ8 ~£¢oÇ  ~£¢o@ ~£¢o8 ~£¢o ~£¢oEp ~£¢p D( ~£¢p ( ~£¢p ‡ ~£¢p Àx ~£¢q á@ ~£¢q,âH ~£¢q,Ç∏ ~£¢q,¬  ~£¢q,LË ~£¢r,B( ~£¢r,B ~£¢r+B» ~£¢x+Ã@ ~£¢|+¿` ~£¢|*…∏ ~£¢Ä*…ò ~£¢Ä*¬ò ~£¢Ä*¡Ë ~£¢Ä*	∏ ~£¢Ñ) X ~£¢á)…Ë ~£¢á)¿à ~£¢á)p ~£¢ã)  ~£¢ã)N ~£¢ã)E ~£¢ã)E¿ ~£¢ã)C† ~£¢ã)C` ~£¢ã)CP ~£¢ã)B  ~£¢ã'≈ ~£¢å'Üÿ ~£¢ç'Ä‡ ~£¢ç'Ä( ~£¢ç'
+H ~£¢ç'	p ~£¢ç'  ~£¢ç'  ~£¢ç'E` ~£¢é'D∞ ~£¢é'D† ~£¢é'Dê ~£¢é'D  ~£¢é'B ~£¢é'Aà ~£¢é'@0 ~£¢é(Nh ~£¢è(A∞ ~£¢è( Ä ~£¢è(Œ ~£¢è(»0 ~£¢è(¡ ~£¢è&ä( ~£¢ì&âX ~£¢ì& H ~£¢ì&√0 ~£¢ì&¿ ~£¢ì&¿x ~£¢ì&Ë ~£¢î&
+( ~£¢î&C@ ~£¢î%X ~£¢ï%∏ ~£¢ï%à ~£¢ï%À– ~£¢ô%√0 ~£¢ô%ã– ~£¢ô%äH ~£¢ô%Ö† ~£¢ô%Å0 ~£¢ô#J‡ ~£¢ô#G0 ~£¢ô#Dà ~£¢ô#D8 ~£¢ô#Aà ~£¢ô#A ~£¢ô#@h ~£¢ô#à ~£¢ö#h ~£¢ö# ~£¢ö# ò ~£¢ö#é8 ~£¢õ#é ~£¢õ#ä– ~£¢õ#ÖË ~£¢õ#Ö® ~£¢õ#Å@ ~£¢õ#ÄÄ ~£¢õ#Œ( ~£¢ú#¿0 ~£¢ú#¿  ~£¢ú#¿ ~£¢ú$h ~£¢ú$
+8 ~£¢ú$  ~£¢ú$  ~£¢ú$N ~£¢ù$Jò ~£¢ù$Fò ~£¢ù$ ® ~£¢û$∆à ~£¢û$ƒ¯ ~£¢û$¿ ~£¢û$âp ~£¢û$Å@ ~£¢û$Ä– ~£¢û$Ä ~£¢û!Kà ~£¢ü!G† ~£¢ü!x ~£¢ü!	  ~£¢ü!H ~£¢ü!Õê ~£¢†!Ãò ~£¢†!Àò ~£¢†!«† ~£¢†!∆P ~£¢†!√Ä ~£¢†!√ ~£¢†!¡p ~£¢†!¡ ~£¢†!¿∞ ~£¢†!é ~£¢°!ãÿ ~£¢°!ã∞ ~£¢°!â0 ~£¢°!â  ~£¢°!àÿ ~£¢°!á† ~£¢°!áH ~£¢°!Ü@ ~£¢°!Ö† ~£¢°"Œ¯ ~£¢¢"…ò ~£¢¢"»¯ ~£¢¢"ãË ~£¢£"ä‡ ~£¢£"á» ~£¢£"Åÿ ~£¢£"Å® ~£¢£"Äx ~£¢£"Nh ~£¢£"K¿ ~£¢£"H® ~£¢£"Hx ~£¢£"Gx ~£¢£"F¿ ~£¢£"EH ~£¢£"E8 ~£¢£"‡ ~£¢§"Ë ~£¢§"H ~£¢§"h ~£¢§Kà ~£¢•I¿ ~£¢•FÄ ~£¢•Fp ~£¢•D® ~£¢•A® ~£¢•ÀH ~£¢©À ~£¢©â¿ ~£¢™Ë ~£¢™ÿ ~£¢™
+∞ ~£¢™J∞ ~£¢™àê ~£¢™¿Ä ~£¢´ çê ~£¢´ ã¿ ~£¢´ ÄÄ ~£¢´ Ãò ~£¢´ À¿ ~£¢´ «P ~£¢´ ƒ® ~£¢´ ¿† ~£¢´ ¿ ~£¢¨ 
+¿ ~£¢¨ @ ~£¢¨ ∏ ~£¢¨ J– ~£¢≠ B∞ ~£¢≠ A∏ ~£¢≠Õê ~£¢≠≈p ~£¢≠ƒ» ~£¢≠ãà ~£¢Æâ0 ~£¢Æá– ~£¢ÆÜ ~£¢ÆÜ` ~£¢ÆK¯ ~£¢ÆG ~£¢Æâ¿ ~£¢µDà ~£¢∂X ~£¢∂I∞ ~£¢∂HH ~£¢ΩX ~£¢ΩÀh ~£¢æ∆P ~£¢æKH ~£¢¬ÀX ~£¢…… ~£¢…à8 ~£¢ÃK( ~£¢”ç ~£¢›â ~£¢›áê ~£¢›Ü‡ ~£¢›Õ  ~£¢ﬁÉ  ~£¢·
+à ~£¢ÂH( ~£¢ÂF‡ ~£¢ÂE∞ ~£¢Âà8 ~£¢Êâ∏ ~£¢ÈÀ ~£¢È– ~£¢Í– ~£¢Í p ~£¢ÍK  ~£¢ÓBX ~£¢ÓBH ~£¢ÓX ~£¢ÓçP ~£¢Ó¬P ~£¢Ôä¯ ~£¢ÚJ@ ~£¢Ú
+@ ~£¢ÛË ~£¢ÛKÿ ~£¢ÛÀ® ~£¢Ûãê ~£¢Ùç∞ ~£¢Ùäà ~£¢ÙÅ– ~£¢Ù
+  ~£¢¯† ~£¢¯Ä ~£¢¯ãx ~£¢¸L ~£¢¸Dê ~£¢¸D8 ~£¢ˇ@∏ ~£¢ˇ P ~££ á¿ ~££ Là ~££ƒ ~££
+¿@ ~££
+À8 ~££
+Ä ~££GH ~££
+p ~££
+H ~££
+M ~££
+«H ~££	M  ~££	C† ~££
+x ~££çê ~££$çP ~££(M` ~££,Õ ~££,¬∏ ~££,ä ~££,Ç ~££,8 ~££-® ~££-ò ~££-P ~££-B» ~££-A– ~££-äh ~££.  ~££.¬¯ ~££.C ~££.B¯ ~££.BË ~££.Çê ~££2Œò ~££2¬ê ~££2K8 ~££3BÄ ~££3Nà ~££6G` ~££6B∞ ~££6ò ~££7P ~££7H ~££7– ~££> ~££>N¿ ~££>G ~££FP ~££Fá8 ~££FÇ0 ~££F ãò ~££J ãà ~££J «( ~££K ≈ ~££K Kò ~££K @ ~££K ¯ ~££K,â8 ~££L,Çà ~££L,Äÿ ~££L,…X ~££L,»x ~££L,√8 ~££L,B ~££L,  ~££M+@à ~££M+@h ~££M+Ë ~££M+ÄË ~££N+Ä» ~££N*¡ÿ ~££Q*åH ~££R*â ~££R*Å® ~££R*ÿ ~££U)Ë ~££V)p ~££V)‡ ~££V)∞ ~££V)0 ~££V)Öê ~££V)Ñp ~££V'	H ~££W'‡ ~££W'¿ ~££W'¿ ~££W'  ~££W'EP ~££W'D ~££W'«P ~££X'ƒÿ ~££X'ƒò ~££X'ƒX ~££X'√ÿ ~££X'¡P ~££X'á8 ~££Y'ÜX ~££Y'ÇË ~££Y(Nà ~££Y(@p ~££Y(( ~££Y(«– ~££Z& ‡ ~££]& 0 ~££]&   ~££]&  ~££]&I0 ~££^&@  ~££^& 8 ~££^&≈0 ~££^%@ ~££b%Ë ~££b%Eê ~££b%A0 ~££b#ò ~££i#
+( ~££i#@ ~££i#x ~££i#H ~££i# ® ~££i#N ~££j#M– ~££j#Fà ~££j#E∏ ~££j#Eà ~££j#D¯ ~££j#Dò ~££j#DH ~££j#C» ~££j#Cò ~££j#Cx ~££j#@® ~££j#çê ~££l#å® ~££l#ãà ~££l#àÿ ~££l#É  ~££l#ÇË ~££l#Äê ~££l#Ä@ ~££l#Ä ~££l#À¿ ~££m# 8 ~££m# ( ~££m#«@ ~££m#≈® ~££m#√∞ ~££m#¡@ ~££m#¡  ~££m#¿‡ ~££m$» ~££n$
+‡ ~££n$	H ~££n$† ~££n$ ® ~££n$@® ~££o$é ~££o$ä ~££o$âX ~££o$Ö ~££o$Öx ~££o$≈» ~££p$¿  ~££p!ê ~££p!à ~££p!
+¿ ~££p!Mê ~££q!Lx ~££q!Õp ~££q!À¿ ~££q! – ~££q!…` ~££q!∆» ~££q!≈X ~££q!¡– ~££q!¡P ~££q!¡@ ~££q!åò ~££r!ä– ~££r!âP ~££r"Õ‡ ~££s"À¿ ~££s" ‡ ~££s"¬∏ ~££s"¿x ~££s"ãò ~££s"ãà ~££s"ãx ~££s"ä( ~££s"á ~££s"á‡ ~££s"á® ~££s"N ~££t"M‡ ~££t"J– ~££t"J8 ~££t"G‡ ~££t"G» ~££t"0 ~££u"
+‡ ~££u"
+– ~££u"
+ ~££u"	Ä ~££u"» ~££u"ò ~££u"x ~££u"h ~££u"@ ~££u"0 ~££u"   ~££u Ñÿ ~££w Ñ» ~££w ÅP ~££w Ãh ~££w «p ~££w ƒ» ~££w à ~££x x ~££x 	  ~££x p ~££x P ~££x  ~££x K¿ ~££x C  ~££xçê ~££yçÄ ~££yç ~££yåË ~££y ¿ ~££y≈  ~££yƒ ~££yƒ‡ ~££yƒ∏ ~££yL¯ ~££zKÿ ~££zKà ~££zJò ~££zI  ~££zF ~££zÄ ~££{
+– ~££{çê ~££{ãx ~££{ä¿ ~££{À∞ ~££|( ~££|KH ~££|J¿ ~££|Jò ~££|Fp ~££|C  ~££|ÀË ~££~çÄ ~££ãh ~££Ñ® ~££p ~££Ç ~££Ç P ~££Ç»X ~££ÉÉ  ~££ÉI¿ ~££äDà ~££ä	¿ ~££ãX ~££ãƒò ~££ãÅò ~££é»H ~££èP ~££è8 ~££èKX ~££èI– ~££èBp ~££èÕP ~££ê@ ~££êD» ~££ó ~££óK( ~££õãÄ ~££üá∞ ~££üÜ∞ ~££ü  ~££©
+¯ ~££≠Ä ~££≠H8 ~££≠≈‡ ~££± ò ~££±É8 ~££±
+¯ ~££±¿ ~££±M  ~££≤Eê ~££≤Õ  ~££≤À( ~££≤ Ë ~££º¬Ë ~££º¬∞ ~££º¡Ä ~££º¡p ~££ºL‡ ~££¿AX ~££¿
+à ~££ƒD¿ ~££ƒã∏ ~££»Ã– ~££Ã¬( ~££Ã® ~££Ã
+® ~££ÃM– ~££Ãå ~££– ~££‘Dp ~££‘@ÿ ~££‘X ~££‘  ~££‘é ~££’á∞ ~££’ÄË ~££’0 ~££‹¿( ~££„
+( ~££Ì
+8 ~££Ì
+– ~££Ì
+L‡ ~££Ì
+GH ~££Ì
+À ~££Ó
+ ¿ ~££Ó
+äp ~££Ó
+áp ~££Ó
+É‡ ~££Ó	çH ~££Ô	Õ8 ~££Ô	ê ~££Ôÿ ~££Û∞ ~££ÛC@ ~££Û«8 ~££Û√( ~££Ûç» ~££ÙÉP ~££Ù
+ò ~££˚√  ~£§	∞ ~£§N ~£§GH ~£§√0 ~£§  ~£§áP ~£§
+Çx ~£§
+ÇH ~£§
+«( ~£§
+Bh ~£§( ~£§x ~£§NP ~£§GP ~£§¬– ~£§¬à ~£§¬0 ~£§é@ ~£§Ç® ~£§Çò ~£§á8 ~£§Ö‡ ~£§B( ~£§P ~£§áP ~£§Ç ~£§«P ~£§¬0 ~£§† ~£§ A ~£§ Aÿ ~£§ «P ~£§ áP ~£§ á8 ~£§,√ ~£§,Çh ~£§, ‡ ~£§+ ê ~£§$+¿† ~£§$+@  ~£§%*A( ~£§()
+  ~£§2)0 ~£§2)ê ~£§2) ~£§2) ~£§2)D` ~£§3)Cp ~£§3)Ç  ~£§3)¬  ~£§4'…H ~£§4'≈x ~£§4'¡x ~£§4'¿  ~£§4'âX ~£§5'Ü¯ ~£§5'Ü8 ~£§5'Ç® ~£§5'Çà ~£§5'Çh ~£§5'ÇX ~£§5'
+¿ ~£§5'	h ~£§5'† ~£§5'0 ~£§5' ∏ ~£§5'G8 ~£§6'F  ~£§6'E@ ~£§6'C0 ~£§6'Aò ~£§6(Œ( ~£§7(≈ ~£§7(√P ~£§7(Ö@ ~£§7(Åp ~£§7(Ä ~£§7(Ä@ ~£§7(	p ~£§8( P ~£§8(N0 ~£§8(@ê ~£§8&	Ä ~£§9&à ~£§9& ~£§9&Nh ~£§9&GP ~£§9&E0 ~£§9& ¿ ~£§:&≈ ~£§:&¡∞ ~£§:&Ö ~£§:%
+H ~£§:%ÿ ~£§:%  ~£§:%¯ ~£§:% ® ~£§:%J∏ ~£§>%Œ» ~£§?%ÀË ~£§?%¡x ~£§?%¿0 ~£§?%çò ~£§?%Å@ ~£§?#ç† ~£§?#åà ~£§?#ãË ~£§?#ã¿ ~£§?#ã® ~£§?#ä‡ ~£§?#âX ~£§?#É0 ~£§?#Åx ~£§?#Å  ~£§?#Ä‡ ~£§?#Œà ~£§A#Õ» ~£§A#Ãò ~£§A#…H ~£§A#«® ~£§A#ƒ¯ ~£§A#® ~£§B#@ ~£§B#» ~£§B#à ~£§B#0 ~£§B#Ë ~£§B#¯ ~£§B#∏ ~£§B# ÿ ~£§B# ∏ ~£§B# à ~£§B# ( ~£§B#  ~£§B#L® ~£§C#Kà ~£§C#F0 ~£§C#Eò ~£§C#D∏ ~£§C#Dx ~£§C#Cÿ ~£§C#C∏ ~£§C#Ah ~£§C#@8 ~£§C$¿ ~£§D$ò ~£§D$
+– ~£§D$
+H ~£§D$à ~£§D$N8 ~£§E$MX ~£§E$J‡ ~£§E$Gò ~£§E$Gà ~£§E$G@ ~£§E$ H ~£§F$…p ~£§F$ƒê ~£§F$¿® ~£§F$ã– ~£§G$É0 ~£§G!¿ ~£§G!
+– ~£§G!	0 ~£§G!à ~£§G!Lò ~£§H!K¿ ~£§H!Kò ~£§H!Hà ~£§H!G8 ~£§H!Œ ~£§H!«‡ ~£§H!≈8 ~£§H!¿0 ~£§H!ç– ~£§I!ã¿ ~£§I!ãà ~£§I!â@ ~£§I!ÖH ~£§I"ç‡ ~£§J"å® ~£§J"ä– ~£§J"à» ~£§J"áà ~£§J"áh ~£§J"Ç∏ ~£§J"Çò ~£§J"ÀË ~£§K" – ~£§K"…` ~£§K"ê ~£§K"à ~£§K"ò ~£§K"à ~£§K"
+8 ~£§K"ÿ ~£§K"® ~£§K"∞ ~£§K"ò ~£§K"p ~£§K"N¯ ~£§L"M– ~£§L"M¿ ~£§L"Lò ~£§L"KË ~£§L † ~£§M ÿ ~£§M ò ~£§M ã∞ ~£§Q Ñ® ~£§Q Õ0 ~£§Q ¬à ~£§Q ¡P ~£§Qã¯ ~£§Rãx ~£§RÕX ~£§RÀà ~£§R≈0 ~£§RH® ~£§RF‡ ~£§RF¿ ~£§Rà ~£§S
+¿ ~£§Sÿ ~£§SÀà ~£§T ¿ ~£§Tãà ~£§WÕê ~£§W»h ~£§Wã ~£§XM` ~£§e	¿ ~£§e	∞ ~£§e` ~£§e  ~£§eƒà ~£§f¡ò ~£§fh ~£§jH ~£§jÀX ~£§wP ~£§xç@ ~£§{Ü` ~£§{KH ~£§|K8 ~£§|  ~£§|Å ~£§çAp ~£§ëä® ~£§îÉ( ~£§îK ~£§òGê ~£§ò  ~£§òç ~£§òâ  ~£§ò
+ÿ ~£§¶
+  ~£§¶MP ~£§ß¬¯ ~£§ßÄ– ~£§ß
+h ~£§ßL ~£§®K ~£§®GÄ ~£§®¡Ä ~£§®ä ~£§≤Ç ~£§≤Õ† ~£§≥  ~£§≥‡ ~£§≥
+∏ ~£§≥K` ~£§¥A∞ ~£§¥ h ~£§¥å∞ ~£§¥äà ~£§¥à ~£§∏X ~£§∏X ~£§∏K  ~£§∏J ~£§∏ãx ~£§πÃ8 ~£§πÀx ~£§πD@ ~£§π¿® ~£§Ωã ~£§¡Éÿ ~£§¡  ~£§¡√¯ ~£§¡Ë ~£§¡ÿ ~£§¡p ~£§¡Gp ~£§¬	GX ~£§¬	äê ~£§∆	áp ~£§∆	É∞ ~£§∆	«8 ~£§∆C( ~£§–á8 ~£§‘ ∏ ~£§ÿçà ~£§ÿÉÄ ~£§ÿá` ~£§ﬂŒ8 ~£§ﬂÕ– ~£§ﬂ ∞ ~£§ﬂ«` ~£§ﬂ  ~£§‡H ~£§‡ ~£§Íÿ ~£§ÍN ~£§ÎA ~£§ÎãP ~£§Îã( ~£§ÎÇh ~£§ÎÀ( ~£§ÎNê ~£§ÏGP ~£§ÏBò ~£§Ô` ~£§∞ ~£§Ç¿ ~£§á` ~£§ÙŒ† ~£§Ù«P ~£§Ù¬p ~£§Ù¬8 ~£§Ù( ~£§ÙB` ~£§ıGP ~£§ıB ~£§ıÖ ~£§˘Œ‡ ~£§˘ ¿ ~£§˘ 8 ~£§˘ K∞ ~£§˘ H∏ ~£§˘ á ~£§˙ ÅË ~£§˙ À† ~£§˙ Àà ~£§˙ ƒò ~£§˙ ¡ÿ ~£§˙,»Ë ~£§˚,√ ~£§˚+â∏ ~£•+Ä0 ~£•+B  ~£•	+@ ~£•	+ÿ ~£•	*
+ ~£•
+*0 ~£•
+*ÃH ~£•*Ã8 ~£•*…– ~£•*¬à ~£•)Ö` ~£•)¬0 ~£•) ~£•)p ~£•)@ ~£•)F0 ~£•)F  ~£•)Eê ~£•)D‡ ~£•)D∞ ~£•)D ~£•)B∞ ~£•'Ö¯ ~£•'É ~£•'Ä@ ~£•'√@ ~£•'	Ä ~£•'x ~£•'– ~£•'‡ ~£•'ê ~£•'  ~£•'Mê ~£•'J¿ ~£•'F  ~£•'E¿ ~£•'D¿ ~£•'C¿ ~£•(É@ ~£•(»  ~£•(« ~£•(«‡ ~£•(N  ~£•(E  ~£•(` ~£•&«∞ ~£•&«P ~£•&√ ~£•&¿ ~£•&É ~£•&Å† ~£•&Ä0 ~£•&K∏ ~£•&E† ~£•&– ~£•&0 ~£•%KË ~£•%K– ~£•%J8 ~£•%	X ~£•%ãË ~£•%Öà ~£•%Œ∏ ~£•%¡@ ~£•#à  ~£•#Öx ~£•#Œ8 ~£•# ‡ ~£•#ƒ0 ~£•#√p ~£•#¿¿ ~£•#∞ ~£•#x ~£•#X ~£•#	  ~£•#¯ ~£•#® ~£•#» ~£•#h ~£•#N ~£•#M ~£•#Mê ~£•#Lò ~£•#J8 ~£•#HË ~£•#Ex ~£•#Dÿ ~£•#D» ~£•#C¯ ~£•#Ch ~£•#A0 ~£•#@  ~£•$Mh ~£•$Là ~£•$IX ~£•$F  ~£•$C0 ~£•$@ ~£•$@ ~£•$x ~£•$∏ ~£•$ ~£•$∏ ~£•$0 ~£•$Õh ~£•$À– ~£•$∆x ~£•$ä‡ ~£• $Ñ¯ ~£• $Ä¯ ~£• !Kx ~£• !Kh ~£• !J– ~£• !F@ ~£• !@8 ~£• !x ~£•!!à ~£•!!x ~£•!! ‡ ~£•!!Õ‡ ~£•"!Õ– ~£•"!Àx ~£•"! ‡ ~£•"!«∞ ~£•"!≈x ~£•"!√@ ~£•"!√0 ~£•"!√  ~£•"!çê ~£•#!ãò ~£•#!ãx ~£•#!ãh ~£•#!Ö‡ ~£•#"â0 ~£•#"àò ~£•#"Üh ~£•#"Å¯ ~£•#"Å∏ ~£•#" 8 ~£•$"…p ~£•$"«‡ ~£•$"«0 ~£•$"√ ~£•$"Kx ~£•%"G∏ ~£•%"G® ~£•%"Gà ~£•%"GX ~£•%"EX ~£•%"
+H ~£•&"	` ~£•&"¯ ~£•&"ò ~£•& M† ~£•& Mê ~£•& L¯ ~£•& h ~£•'  ê ~£•' Àx ~£•' ¿ ~£•' ¿∞ ~£•' Ç† ~£•( Çx ~£•(ÿ ~£•(h ~£•(¿ ~£•( ~£•(KX ~£•)GP ~£•)G@ ~£•)FÄ ~£•)Õ( ~£•)Õ ~£•) – ~£•)∆ ~£•)¿ê ~£•)ä¿ ~£•*h ~£•*8 ~£•*Ä ~£•*Ãÿ ~£•.Ãê ~£•. – ~£•.»X ~£•.â0 ~£•.Àh ~£•/»X ~£•/å† ~£•/ãx ~£•/  ~£•3àh ~£•3Üp ~£•3Àx ~£•6Hh ~£•7C  ~£•7` ~£•7h ~£•7ç` ~£•7ÀX ~£•B»8 ~£•Bà ~£•LH ~£•Sç@ ~£•WÑË ~£•WÕ@ ~£•Wáê ~£•Wç  ~£•b¿ ~£•hê ~£•h‡ ~£•h  ~£•h…  ~£•i P ~£•m @ ~£•z¿à ~£•zã ~£•{ä  ~£•{J  ~£•{‡ ~£•{
+0 ~£•{B∏ ~£•|	8 ~£•|p ~£•| 0 ~£•|Ç» ~£•| h ~£•ÄÅ® ~£•Éäò ~£•äÇ ~£•ä
+ÿ ~£•é
+à ~£•éÿ ~£•éL∞ ~£•èKà ~£•èJò ~£•è¿ ~£•è…‡ ~£•èƒ∞ ~£•èä∏ ~£•ì0 ~£•ì ~£•ì » ~£•ìÑH ~£•ó   ~£•ó@h ~£•óò ~£•òp ~£•òH ~£•òãX ~£•òÄò ~£•òÀX ~£•ôƒP ~£•ôH ~£•†Lÿ ~£•†D ~£•†	h ~£•†	ä» ~£•§	áH ~£•§	√¿ ~£•§
+ä¯ ~£•§
+ä∞ ~£•§ä® ~£•ØÕ∏ ~£•ØÕ® ~£•ØJà ~£•Ø@ ~£•∞ 0 ~£•∞ä∏ ~£•∞® ~£•¥Mò ~£•¥Cp ~£•¥CX ~£•¥h ~£•¥â– ~£•∏äÿ ~£•ºà  ~£•ºÉ ~£•º   ~£•º¿Ë ~£•º	 ~£•º	‡ ~£•º8 ~£•ºJ8 ~£•ΩC  ~£•Ω8 ~£•ΩB8 ~£•æ…ÿ ~£•æ«` ~£•æá` ~£•æá( ~£•æNx ~£•øA ~£•ø‡ ~£•øá` ~£•øÇà ~£•ø…† ~£•¿¡ ~£•¿é∞ ~£•¿ãX ~£•¿ÇH ~£•¿«` ~£•¿Ä ~£•¡8 ~£•¡G8 ~£•ƒB  ~£•ƒ( ~£•≈ ~£•≈ãê ~£•≈¬@ ~£•≈ Ç  ~£•∆ Äà ~£•∆ »∏ ~£•∆ ® ~£•∆ ò ~£•∆ P ~£•∆  ~£•∆ GP ~£•« G ~£•«,»ò ~£•«,Å‡ ~£•«,L¯ ~£•»,ÿ ~£•»+Ä¯ ~£•»+Ä∏ ~£•»+Ä@ ~£•»+	– ~£•œ+ ~£•œ*Åò ~£•÷)çx ~£•⁄)Å¯ ~£•⁄)P ~£•ﬁ) ~£•ﬁ)F@ ~£•ﬁ)Dê ~£•ﬁ'…h ~£•ﬁ'ƒ¯ ~£•ﬁ'¿@ ~£•ﬁ'á ~£•ﬂ'Ü∏ ~£•ﬂ'Ü® ~£•ﬂ'É( ~£•ﬂ'É ~£•ﬂ'Åÿ ~£•ﬂ'Åò ~£•ﬂ'Ä ~£•ﬂ'JH ~£•‡'G( ~£•‡'G ~£•‡'D‡ ~£•‡'Cê ~£•‡'  ~£•·'Ä ~£•·' X ~£•·(éh ~£•·(á8 ~£•·(á( ~£•·(É( ~£•·(Å¿ ~£•·(ƒ¯ ~£•‚(CP ~£•‚(A` ~£•‚(	– ~£•‚( ê ~£•‚( @ ~£•‚&é8 ~£•„&Ä ~£•„&¿‡ ~£•„&Aà ~£•‰&@@ ~£•‰&∏ ~£•‰%M8 ~£•‰%D¯ ~£•‰%@ ~£•‰%– ~£•Â%
+® ~£•Â%  ~£•Â%Ä ~£•Â%≈x ~£•Â#ãò ~£•Ê#ä8 ~£•Ê#â ~£•Ê#àË ~£•Ê#á‡ ~£•Ê#á» ~£•Ê#á@ ~£•Ê#Å@ ~£•Ê#Ä– ~£•Ê#Ä∏ ~£•Ê#Äp ~£•Ê#Ä` ~£•Ê#Ä  ~£•Ê#Õp ~£•Á#Àà ~£•Á# ® ~£•Á#∆x ~£•Á#≈ò ~£•Á# ~£•Ë#ò ~£•Ë#
+‡ ~£•Ë#
+– ~£•Ë#x ~£•Ë#ÿ ~£•Ë#x ~£•Ë#( ~£•Ë#x ~£•Ë# x ~£•Ë# X ~£•Ë#Kò ~£•È#G» ~£•È#G@ ~£•È#F@ ~£•È#EX ~£•È#C® ~£•È#CH ~£•È#@X ~£•È$KË ~£•Í$Eÿ ~£•Í$h ~£•Î$– ~£•Î$ ~£•Î$ 0 ~£•Î$çÿ ~£•Î$Üò ~£•Î$ÕÄ ~£•Ï$« ~£•Ï$≈ÿ ~£•Ï!KX ~£•Ï!I@ ~£•Ï!F‡ ~£•Ï!ò ~£•Ì!
+ò ~£•Ì!	P ~£•Ì!h ~£•Ì!Àà ~£•Ì!«X ~£•Ì!¬P ~£•Ì!¬@ ~£•Ì!ç‡ ~£•Ó!ä8 ~£•Ó!â ~£•Ó"åò ~£•Ó"à¯ ~£•Ó"àË ~£•Ó"Ñ® ~£•Ó"Çà ~£•Ó"Õ ~£•Ô"Ãh ~£•Ô"»ê ~£•Ô"«» ~£•Ô"«@ ~£•Ô"ƒx ~£•Ô"¬ò ~£•Ô"Kò ~£•"KX ~£•"H¯ ~£•"Gò ~£•"∏ ~£•"( ~£•"P ~£•ê ~£•Òx ~£•Ò– ~£•ÒÄ ~£•Òp ~£•ÒKh ~£•ÚJ¿ ~£•ÚG0 ~£•ÚF∞ ~£•Úå¯ ~£•Ú∆ ~£•Û 8 ~£•Û 
+– ~£•Û 	@ ~£•Û » ~£•Û G– ~£•Û Õê ~£•Ù À¿ ~£•Ù Àà ~£•Ù  ® ~£•Ù …0 ~£•Ù ã¿ ~£•Ù ãx ~£•Ù â@ ~£•ÙX ~£•ı
+– ~£•ı
+¿ ~£•ı
+ò ~£•ıK∞ ~£•ıäò ~£•ˆÑ® ~£•ˆÀh ~£•ˆÀH ~£•ˆ ∞ ~£•ˆ…0 ~£•ˆ∆p ~£•ˆã8 ~£•˜ ¿ ~£•˜L@ ~£•˜ ê ~£•˜Ä0 ~£•¯Àx ~£¶…∞ ~£¶çP ~£¶â∞ ~£¶Å ~£¶8 ~£¶ÀH ~£¶ã8 ~£¶!ÜP ~£¶!∆P ~£¶"Ä ~£¶"Õ0 ~£¶"8 ~£¶#ã ~£¶&Ö ~£¶&8 ~£¶.Õ  ~£¶<√ ~£¶<Õ0 ~£¶C« ~£¶C¿h ~£¶CÄ ~£¶CM` ~£¶DJh ~£¶H
+ ~£¶IÇÿ ~£¶IÅò ~£¶IÅ∏ ~£¶MÀ∏ ~£¶MN@ ~£¶M	– ~£¶MA¯ ~£¶NA¿ ~£¶N x ~£¶QãP ~£¶R x ~£¶R¡  ~£¶Réê ~£¶Rãò ~£¶RK‡ ~£¶V@ ~£¶Vå ~£¶Zãh ~£¶Zã0 ~£¶ZÑX ~£¶Z@0 ~£¶aã ~£¶a¿` ~£¶bD  ~£¶i	0 ~£¶i	Gp ~£¶i	C∞ ~£¶i
+Üê ~£¶p
+¿  ~£¶p@¯ ~£¶{‡ ~£¶èB ~£¶èB‡ ~£¶èé ~£¶êä¯ ~£¶ê√ ~£¶ñç– ~£¶ñà ~£¶ñáH ~£¶ñI ~£¶ñ  ~£¶óá8 ~£¶óÇê ~£¶ó« ~£¶ó¬† ~£¶óGH ~£¶óG( ~£¶ó` ~£¶òP ~£¶òÄ ~£¶òŒx ~£¶ò«H ~£¶ò¬® ~£¶òéà ~£¶ôò ~£¶ô H ~£¶ù G@ ~£¶ù G8 ~£¶ù G( ~£¶ù ã∞ ~£¶ù ä0 ~£¶ù á( ~£¶ù ÑX ~£¶ù ¬ ~£¶ûP ~£¶ûGP ~£¶ûE† ~£¶ûBP ~£¶ûãp ~£¶üáP ~£¶üÇ` ~£¶üDà ~£¶£∏ ~£¶£– ~£¶£ãx ~£¶£ÀÄ ~£¶§,BX ~£¶§,BH ~£¶§,Ç¯ ~£¶®,Çÿ ~£¶®,Çx ~£¶®,√( ~£¶®,¬` ~£¶®,¡‡ ~£¶®+Å ~£¶©+Ã ~£¶©+¡ÿ ~£¶©+@ò ~£¶©)M® ~£¶∫)E– ~£¶∫)Ep ~£¶∫)D¿ ~£¶∫)D† ~£¶∫)Dp ~£¶∫)D  ~£¶∫)C ~£¶∫)A∞ ~£¶∫)	ÿ ~£¶ª)– ~£¶ª)  ~£¶ª)` ~£¶ª)∞ ~£¶ª)ê ~£¶ª)P ~£¶ª)ç@ ~£¶º'Çÿ ~£¶¿'Çò ~£¶¿'Å∞ ~£¶¿'≈0 ~£¶¿'ƒ∏ ~£¶¿'√( ~£¶¿'¿∏ ~£¶¿'D` ~£¶¡'D@ ~£¶¡'@( ~£¶¡'` ~£¶¡'∞ ~£¶¡' ~£¶¡'P ~£¶¡'@ ~£¶¡(éx ~£¶¬(éH ~£¶¬(é  ~£¶¬(áP ~£¶¬(ÉP ~£¶¬(Å` ~£¶¬(Õ– ~£¶√(¬p ~£¶√(I ~£¶√(E@ ~£¶√(Aò ~£¶√(@@ ~£¶√(® ~£¶ƒ(p ~£¶ƒ(Ë ~£¶ƒ(ò ~£¶ƒ( p ~£¶ƒ&âh ~£¶ƒ&Õ∞ ~£¶≈&…Ä ~£¶≈&≈  ~£¶≈&√@ ~£¶≈&¬ ~£¶≈&¡– ~£¶≈&¿h ~£¶≈&
+¿ ~£¶∆&	∞ ~£¶∆&† ~£¶∆& ∏ ~£¶∆&K– ~£¶∆%K∏ ~£¶∆%Ip ~£¶∆%Eà ~£¶∆%Ex ~£¶∆% 0 ~£¶«%ã– ~£¶«%âp ~£¶«%ÑË ~£¶«%Ä® ~£¶«%À– ~£¶»%≈† ~£¶»%¡† ~£¶»%¿– ~£¶»#çÄ ~£¶…#çp ~£¶…#ãx ~£¶…#Ü ~£¶…#Ö ~£¶…#Ñp ~£¶…#Å0 ~£¶…#Å ~£¶…#ÄP ~£¶…#Ä0 ~£¶…#Ã® ~£¶ #À– ~£¶ #Àò ~£¶ #∆à ~£¶ #≈ ~£¶ #√‡ ~£¶ #¡P ~£¶ #¿Ä ~£¶ #M¿ ~£¶À#Là ~£¶À#Kx ~£¶À#Ip ~£¶À#IX ~£¶À#G ~£¶À#E® ~£¶À#Eh ~£¶À#D ~£¶À#CX ~£¶À#Ax ~£¶À#@¯ ~£¶À#@– ~£¶À#@∏ ~£¶À#@x ~£¶À#@ ~£¶À#¯ ~£¶Õ# ~£¶Õ#Ë ~£¶Õ#‡ ~£¶Õ#∏ ~£¶Õ#Ë ~£¶Õ# ¯ ~£¶Õ$K– ~£¶Œ$J– ~£¶Œ$JH ~£¶Œ$Ip ~£¶Œ$G ~£¶Œ$D¯ ~£¶Œ$ò ~£¶Œ$ò ~£¶Œ$  ~£¶Œ$ò ~£¶Œ$ ~£¶Œ$» ~£¶Œ$  ~£¶Œ$çÄ ~£¶œ$ä( ~£¶œ$áò ~£¶œ$á ~£¶œ$Ü ~£¶œ$∆ò ~£¶–$≈à ~£¶–!å® ~£¶–!ãË ~£¶–!ä‡ ~£¶–!ä– ~£¶–!âÿ ~£¶–!à® ~£¶–!Ç– ~£¶–!Ã® ~£¶—!…P ~£¶—!«¿ ~£¶—!≈» ~£¶—!ƒ∞ ~£¶—!¬` ~£¶—!† ~£¶“!` ~£¶“!¯ ~£¶“! X ~£¶“!FP ~£¶”"é ~£¶”"ã® ~£¶”"äò ~£¶”"à  ~£¶”"á∏ ~£¶”"Öh ~£¶”"Ç¯ ~£¶”"Ç ~£¶”"Ä» ~£¶”"Ãà ~£¶‘"Àà ~£¶‘"»Ë ~£¶‘"«® ~£¶‘"≈∏ ~£¶‘"N0 ~£¶’"J‡ ~£¶’"HX ~£¶’"Cx ~£¶’"‡ ~£¶’"¿ ~£¶’"x ~£¶’"
+– ~£¶’"	p ~£¶’"	@ ~£¶’"X ~£¶’Kx ~£¶÷J– ~£¶÷  ~£¶◊çX ~£¶◊Å∏ ~£¶◊ÄÄ ~£¶◊À– ~£¶◊Àx ~£¶◊…P ~£¶◊∆  ~£¶◊ Õ† ~£¶ÿ Ãà ~£¶ÿ «` ~£¶ÿ åò ~£¶Ÿ Ä† ~£¶Ÿ Äê ~£¶Ÿ J– ~£¶Ÿ J® ~£¶Ÿ I0 ~£¶Ÿ G8 ~£¶Ÿ C– ~£¶Ÿ ê ~£¶⁄ Ë ~£¶⁄ – ~£¶⁄à ~£¶⁄Mê ~£¶⁄Kx ~£¶⁄Àx ~£¶€√  ~£¶€ä– ~£¶€ä¿ ~£¶€Å∏ ~£¶€L ~£¶‹® ~£¶‹√ ~£¶‹çê ~£¶‹ÜÄ ~£¶‹I¿ ~£¶„HH ~£¶„ãh ~£¶ÁF` ~£¶ÓMP ~£¶ıI∞ ~£¶˘â∞ ~£¶˘H ~£¶˝Ä ~£ß
+Õ0 ~£ß
+…P ~£ß
+√0 ~£ß¬ ~£ßàH ~£ßÜ‡ ~£ßÀ ~£ßH‡ ~£ßÕ ~£ß%ÃP ~£ß% ~£ß&Jà ~£ß)p ~£ß* 0 ~£ß*«Ä ~£ß*¿ò ~£ß*äò ~£ß*äà ~£ß*ä0 ~£ß*ÄH ~£ß*
+0 ~£ß.® ~£ß. P ~£ß.À ~£ß/ ¯ ~£ß/ç  ~£ß/Kp ~£ß/A® ~£ß/0 ~£ß0ƒ ~£ß3À@ ~£ß4¡ ~£ß4Ã∞ ~£ß>¡x ~£ß>¡h ~£ß>ã¯ ~£ß?Å ~£ß?  ~£ß? ~£ß?x ~£ß?8 ~£ßCL  ~£ßCD( ~£ßCá8 ~£ßC¿¿ ~£ßD® ~£ßD@x ~£ßDÑ( ~£ßDÉË ~£ßH  ~£ßO	 ¯ ~£ßV
+ç ~£ßY
+Gp ~£ß]Ë ~£ßa
+∏ ~£ßa
+X ~£ßaäò ~£ßk
+® ~£ßoD¯ ~£ßo	Ë ~£ßo` ~£ßo» ~£ßoG` ~£ßpäË ~£ßpÄË ~£ßp¿ÿ ~£ßp
+8 ~£ßq ~£ßq¿ ~£ßqJ  ~£ßqH∞ ~£ßqBÿ ~£ßqG` ~£ßxG8 ~£ßxBH ~£ßx† ~£ßy	® ~£ßy` ~£ßyp ~£ßy«H ~£ßyÇ† ~£ßz® ~£ßz ~£ßzG( ~£ßzÇ  ~£ß~ ∏ ~£ß~ H ~£ß~ ® ~£ß~ L∏ ~£ß~ Àò ~£ß «8 ~£ß Ö– ~£ßÇ8 ~£ß«( ~£ßÄ¬( ~£ßÄP ~£ßÄG` ~£ßÄE ~£ßÄ«P ~£ßÅ« ~£ßÅ¬P ~£ßÅÇ0 ~£ßÅP ~£ßÅ® ~£ßÅ  ~£ßÅ ~£ßÅEê ~£ßÇ,Bh ~£ßÇ+Å» ~£ßå+Å∏ ~£ßå+ÄP ~£ßå+¡Ë ~£ßç+D¯ ~£ßç+C( ~£ßç+B ~£ßç+AË ~£ßç+@® ~£ßç+ H ~£ßé*Aÿ ~£ßé* à ~£ßë*â® ~£ßì*»ò ~£ßî*¡x ~£ßî)Ç0 ~£ßî)E∞ ~£ßò)D  ~£ßò' H ~£ßõ'…p ~£ßõ'«( ~£ßõ'√x ~£ßõ'¡ ~£ßõ'¿ ~£ßõ'¿P ~£ßõ'äH ~£ßú'Ü ~£ßú'Ö» ~£ßú'ê ~£ßù'0 ~£ßù'∞ ~£ßù'Ä ~£ßù'p ~£ßù'` ~£ßù' ( ~£ßù'Mh ~£ßû'J– ~£ßû'Gx ~£ßû'CÄ ~£ßû(N@ ~£ßû(E ~£ßû(C@ ~£ßû(Aà ~£ßû(ò ~£ßü(à∞ ~£ßü(àê ~£ßü(≈0 ~£ßü(¬@ ~£ßü(¬  ~£ßü(¿ ~£ßü&äH ~£ß†&à  ~£ß†&áP ~£ß†&Ö0 ~£ß†&ÑË ~£ß†&¡ ~£ß°&8 ~£ß°&@ ~£ß°&E  ~£ß°&@` ~£ß°%x ~£ß¢% ~£ß¢%E  ~£ß¢%Ñ¯ ~£ß¢#ç– ~£ß¶#ã– ~£ß¶#à» ~£ß¶#Üà ~£ß¶#Ü@ ~£ß¶#Öà ~£ß¶#Ñ¯ ~£ß¶#Åà ~£ß¶#ÅP ~£ß¶#Ä‡ ~£ß¶#Äê ~£ß¶#ÄÄ ~£ß¶#À® ~£ßß#Àx ~£ßß# – ~£ßß# ¿ ~£ßß#«ò ~£ßß#«  ~£ßß#√ê ~£ßß#¿¯ ~£ßß#¿ ~£ßß#J‡ ~£ß©#J– ~£ß©#J( ~£ß©#Fx ~£ß©#D ~£ß©#CË ~£ß©#AX ~£ß©#A ~£ß©#@H ~£ß©#‡ ~£ß™#	  ~£ß™# ~£ß™#® ~£ß™#à ~£ß™#h ~£ß™#H ~£ß™#8 ~£ß™#H ~£ß™#¯ ~£ß™#à ~£ß™# Ë ~£ß™# h ~£ß™# H ~£ß™$ÑË ~£ß´$É ~£ß´$≈h ~£ß¨$® ~£ß¨$x ~£ß¨$à ~£ß¨$
+‡ ~£ß¨$ÿ ~£ß¨$ ~£ß¨$  ~£ß¨$N( ~£ß≠$N ~£ß≠$J‡ ~£ß≠$E ~£ß≠!à ~£ßÆ!L® ~£ßÆ!I0 ~£ßÆ!G∞ ~£ßÆ!äò ~£ßÆ!àò ~£ßÆ!á∞ ~£ßÆ!Üx ~£ßÆ!Ö ~£ßÆ!Ãà ~£ßØ! – ~£ßØ!…` ~£ßØ!… ~£ßØ!∆ÿ ~£ßØ!∆à ~£ßØ!¡Ä ~£ßØ!¿  ~£ßØ"é ~£ß∞"ã¿ ~£ß∞"â` ~£ß∞"â ~£ß∞"à® ~£ß∞"áò ~£ß∞"Öÿ ~£ß∞"Öx ~£ß∞"Å( ~£ß∞"Å ~£ß∞"Ä∏ ~£ß∞"ÄX ~£ß∞"Ãò ~£ß±"Àò ~£ß±"»0 ~£ß±"∆ ~£ß±"≈h ~£ß±"x ~£ß≤"h ~£ß≤"0 ~£ß≤" ~£ß≤"® ~£ß≤"ò ~£ß≤"x ~£ß≤"
+ò ~£ß≤"  ~£ß≤"à ~£ß≤"¿ ~£ß≤" P ~£ß≤"Kà ~£ß¥"J– ~£ß¥"I® ~£ß¥"H∏ ~£ß¥"Hh ~£ß¥"Ex ~£ß¥"Eh ~£ß¥"Bx ~£ß¥Õ† ~£ßµÃ¯ ~£ßµ…@ ~£ßµ«‡ ~£ßµ«  ~£ßµà» ~£ßµÑ® ~£ßµÉ ~£ßµMÄ ~£ß∂Mp ~£ß∂Kò ~£ß∂K8 ~£ß∂@ê ~£ß∂ ƒË ~£ß∫ ç† ~£ß∫ Ñ∏ ~£ß∫ ÉP ~£ß∫  ~£ßª ¯ ~£ßª K¿ ~£ßªê ~£ßªx ~£ßªx ~£ßªKË ~£ßºKà ~£ßºJ¿ ~£ßº… ~£ßº»h ~£ßº» ~£ßº»  ~£ßº¡∏ ~£ßºãÿ ~£ßΩÑ∏ ~£ßΩÄê ~£ßΩMê ~£ßΩI– ~£ßΩAò ~£ßΩÀà ~£ß¡Àx ~£ß¡À8 ~£ß¡ ¯ ~£ß¡¡® ~£ß¡ãÿ ~£ß¬Ñò ~£ß¬Ñà ~£ß¬…– ~£ß¬ƒà ~£ß¬√  ~£ß¬¡® ~£ß¬D® ~£ß√ò ~£ß√Åò ~£ßƒ»X ~£ßƒ¬ ~£ßƒÕ` ~£ß“…∞ ~£ß“ç` ~£ß“¯ ~£ß“P ~£ß“çP ~£ß÷Õ0 ~£ß÷H( ~£ß›0 ~£ß›8 ~£ß›ƒ¯ ~£ßﬁ¿∞ ~£ßﬁÑx ~£ß·0 ~£ßËÀ8 ~£ßÈ  ~£ßÏÄ ~£ßÏ…  ~£ßÌàH ~£ßÛ p ~£ßÙX ~£ßÙ8 ~£ßÙGÄ ~£ßÙ¡† ~£ßı¿∏ ~£ßıãH ~£ßıH ~£ßıA ~£ß˘  ~£ß˘( ~£ß˘	ò ~£ß˘âò ~£ß˘Å ~£ß˘» ~£ß˙Dà ~£ß˙A` ~£ß˙
+® ~£ß˙é  ~£ß˚¡ê ~£ß˚ ò ~£ß˚¬8 ~£ß˚Å® ~£ß˛Kò ~£ßˇ
+0 ~£ßˇÅX ~£ßˇ¿ ~£ßˇLX ~£®L0 ~£®( ~£®áX ~£®ƒÄ ~£®KH ~£®K  ~£® ~£®ò ~£®8 ~£®Ãx ~£®Ã@ ~£®Ñ ~£®É¯ ~£®Ã∏ ~£®	  ~£®	
+ÿ ~£®	p ~£®	8 ~£®	MX ~£®	áX ~£®	É¿ ~£®	«p ~£®
+ä¿ ~£®
+áX ~£®
+JX ~£®
+C‡ ~£®
+
+Ä ~£® » ~£® «p ~£® «8 ~£® ∏ ~£®*J ~£®+ä ~£®+Ç ~£®+Çÿ ~£®+N ~£®/ ~£®/
+H ~£®/ ~£®/¬P ~£®/É  ~£®0	∏ ~£®0 ~£®0ò ~£®0H ~£®0«8 ~£®4¬à ~£®4¬∏ ~£®7áH ~£®8G` ~£®8GH ~£®8B¿ ~£®8h ~£®8 A∏ ~£®9 X ~£®9 ( ~£®9 àÿ ~£®9 áP ~£®9 «P ~£®:á( ~£®:«H ~£®: ~£®:X ~£®:B ~£®;é ~£®;áP ~£®;Ñ∏ ~£®;Å∞ ~£®;Ä ~£®;ƒ® ~£®<Kà ~£®<GP ~£®<G ~£®<† ~£®=ÿ ~£®=,A¯ ~£®=,ç ~£®@,Çò ~£®@,Å ~£®@,√H ~£®A+Bÿ ~£®A+@∏ ~£®A+ ~£®B+Àà ~£®C+Ä` ~£®C*I∏ ~£®C*A ~£®C*â– ~£®G*â∏ ~£®G*ÅË ~£®G*À∞ ~£®G)ä  ~£®G)âË ~£®G)M∏ ~£®K)  ~£®K)¿ ~£®K)@ ~£®K)Ä ~£®K)– ~£®K)0 ~£®K'≈ ~£®L'ƒ» ~£®L'¬ÿ ~£®L'¿» ~£®L'¿0 ~£®L'¿ ~£®L'âh ~£®M'Ç» ~£®M'Ä» ~£®M'Ä( ~£®M'0 ~£®N'J8 ~£®N'F¯ ~£®N'CP ~£®N'Ax ~£®N'A ~£®N(Nx ~£®O(K∏ ~£®O(E ~£®O( ~£®O(áH ~£®O(Ö0 ~£®O(Å– ~£®O(Å∞ ~£®O(«` ~£®P(¬P ~£®P& ~£®P&H‡ ~£®Q&A† ~£®Q&«p ~£®T&¡p ~£®T%P ~£®U% ~£®U%M( ~£®U%IX ~£®U%E† ~£®U%Å ~£®U%√ ~£®V%¿ ~£®V#ÕÄ ~£®V#…X ~£®V#»Ë ~£®V#»ÿ ~£®V#≈∏ ~£®V#√@ ~£®V#åò ~£®W#ä‡ ~£®W#Öò ~£®W#Ä@ ~£®W#K– ~£®W#I  ~£®W#I  ~£®W#F0 ~£®W#DX ~£®W#@ò ~£®W#® ~£®X#à ~£®X#	p ~£®X#0 ~£®X#X ~£®X#» ~£®X#X ~£®X$	p ~£®Y$	X ~£®Y$ – ~£®Y$K¿ ~£®Z$Öà ~£®Z$Ä ~£®Z$Õ∏ ~£®Z!Ë ~£®Z!¿ ~£®Z!X ~£®Z!8 ~£®Z!J– ~£®[!Hÿ ~£®[! 8 ~£®[!»ò ~£®[!åx ~£®\!ä ~£®\!á8 ~£®\!ÜP ~£®\"ç ~£®\"åà ~£®\"ä‡ ~£®\"ÖX ~£®\"É ~£®\"Åà ~£®\"Åh ~£®\"Ä¯ ~£®\"ÄH ~£®\"…0 ~£®^"¿h ~£®^" ~£®^"® ~£®^"h ~£®^"	 ~£®^"x ~£®^" ~£®^"Nx ~£®_"I ~£®_"HË ~£®_"G ~£®_Õê ~£®_»» ~£®_∆0 ~£®_≈∞ ~£®_ãò ~£®`ä– ~£®`ÜP ~£®`Ü0 ~£®`Mh ~£®`MX ~£®`G  ~£®`F– ~£®`ê ~£®a  à ~£®a ¿‡ ~£®a Ä∞ ~£®b L» ~£®b L∏ ~£®b K– ~£®b Fx ~£®b Dÿ ~£®b @ê ~£®b ÿ ~£®c ∏ ~£®cÕP ~£®c ò ~£®c…  ~£®cãh ~£®dFÄ ~£®d@p ~£®dÕÄ ~£®hÃ» ~£®h ~£®kÅ– ~£®oƒ® ~£®rp ~£®vM` ~£®yàX ~£®Ñ∆` ~£®Ñ` ~£®ÑM` ~£®ÑÑà ~£®ÖX ~£®àH ~£®àò ~£®åM  ~£®åC0 ~£®åÀH ~£®ìM ~£®ßK ~£®ß»H ~£®®»¿ ~£®´â0 ~£®¨ ~£®¨HX ~£®¨ä ~£®¨Çx ~£®¨Ç0 ~£®¨¿x ~£®≠Jx ~£®≠ Ë ~£®± ÿ ~£®± p ~£®±A8 ~£®±ä0 ~£®±Å  ~£®±Ä ~£®± ò ~£®µ à ~£®µã» ~£®∂Jà ~£®∂A0 ~£®∂p ~£®∂Àx ~£®∂ä  ~£®∑É ~£®∑
+∏ ~£®æ( ~£®æNê ~£®æA8 ~£®æŒp ~£®¬` ~£®≈Œ‡ ~£®∆ ® ~£®∆Lp ~£®…LP ~£®…D ~£®…¯ ~£® «p ~£® å» ~£®‘	 ê ~£®Ï¯ ~£®
+h ~£®ÕÄ ~£®Û√` ~£®Û«H ~£®˜ä® ~£®˘éH ~£© Œ  ~£© √  ~£© GH ~£©` ~£©– ~£©äX ~£©Õ¿ ~£©Bê ~£©¬h ~£©¬  ~£©«` ~£©¬– ~£©` ~£©∞ ~£© ~£© »® ~£© ¿ ~£© P ~£© 8 ~£© K¿ ~£© GP ~£© B  ~£© A ~£©«8 ~£©«( ~£©ãh ~£©Ç ~£©8 ~£©X ~£©H ~£©G( ~£©áH ~£©«8 ~£©¬p ~£©Jp ~£©G8 ~£©E∞ ~£©+	‡ ~£©"+	∏ ~£©"+  ~£©"+ x ~£©"+ 8 ~£©"+I® ~£©"+DË ~£©"+ÅË ~£©#,»h ~£©&,¬ ~£©&,¡ ~£©&,âh ~£©',Ç® ~£©',Bx ~£©',
+ê ~£©'*I– ~£©(*I» ~£©(*åX ~£©+)ÅË ~£©/)ÿ ~£©2) ~£©2)ê ~£©2)– ~£©2)¿ ~£©2)p ~£©2)M ~£©3)MP ~£©3)E@ ~£©3'¯ ~£©4'∞ ~£©4' ~£©4' » ~£©4' 0 ~£©4'Ih ~£©4'Gÿ ~£©4'Ep ~£©4'C ~£©4'B ~£©4'A¯ ~£©4'A» ~£©4'Ü ~£©5'Ö ~£©5'Ç¯ ~£©5'Å¯ ~£©5'ÅP ~£©5'ƒ( ~£©6'¡∞ ~£©6'¡ò ~£©6(P ~£©6(8 ~£©6(@ ~£©6( ‡ ~£©6( Ä ~£©6(à` ~£©:(Ö ~£©:(É ~£©:(«P ~£©;(√@ ~£©;(¬0 ~£©;&á8 ~£©;&Ö∞ ~£©;&Öà ~£©;&Å∞ ~£©;&ÄÄ ~£©;&…X ~£©<&«ê ~£©<&¬  ~£©<&¡¿ ~£©<&  ~£©=&J– ~£©=&AP ~£©=%x ~£©=%Ë ~£©=%K– ~£©>%Fà ~£©>%@0 ~£©>%Ã ~£©>%≈à ~£©>#ç∞ ~£©B#á∏ ~£©B#á® ~£©B#Œx ~£©B#Œ ~£©B# ‡ ~£©B#« ~£©B#¿– ~£©B#¿ ~£©B#( ~£©C#  ~£©C#∏ ~£©C#Ä ~£©C#@ ~£©C#0 ~£©C#¯ ~£©C#ò ~£©C#x ~£©C#à ~£©C# ~£©C# ~£©C#Ë ~£©C#x ~£©C# ò ~£©C# 8 ~£©C#  ~£©C#M‡ ~£©E#Lh ~£©E#KX ~£©E#G‡ ~£©E#DË ~£©E#Aà ~£©E#@® ~£©E#@à ~£©E#@  ~£©E$® ~£©F$h ~£©F$ ~£©F$ ~£©F$Ë ~£©F$– ~£©F$
+® ~£©F$   ~£©F$  ~£©F$G∏ ~£©G$Fh ~£©G$A† ~£©G$Õ® ~£©H$≈0 ~£©H$≈ ~£©H$¿ ~£©H$ã– ~£©I$äH ~£©I!® ~£©I!ò ~£©I!x ~£©I!
+– ~£©I!	@ ~£©I!® ~£©I!ò ~£©I!Ë ~£©I!Là ~£©J!K¿ ~£©J!Kà ~£©J!GÄ ~£©J!Œ0 ~£©K!Œ ~£©K!Ãò ~£©K!Àh ~£©K!»» ~£©K!»∏ ~£©K!»® ~£©K!∆ò ~£©K!¬ ~£©K!¡¿ ~£©K!åò ~£©L!â® ~£©L!âP ~£©L!áX ~£©L"ãà ~£©L"ä– ~£©L"âò ~£©L"à∏ ~£©L"á» ~£©L"á0 ~£©L"Ç8 ~£©L"Å» ~£©L"ÄË ~£©L"Äÿ ~£©L"Œ ~£©N"Ã® ~£©N"Àx ~£©N" ‡ ~£©N" ò ~£©N"»Ä ~£©N"«∏ ~£©N"∆0 ~£©N"¬H ~£©N"M ~£©O"L® ~£©O"Kh ~£©O"Ip ~£©O"I0 ~£©O"Eÿ ~£©O"DX ~£©O"C® ~£©O" ~£©P"
+¿ ~£©P"8 ~£©P"ò ~£©P ãà ~£©P ä– ~£©P ÅP ~£©P Ä` ~£©P À∞ ~£©Q Àò ~£©Q …@ ~£©Q «@ ~£©Q ¬x ~£©Q † ~£©R ( ~£©R – ~£©R 	0 ~£©R ® ~£©R Bh ~£©R B8 ~£©RÕ8 ~£©SÀX ~£©S – ~£©S≈ê ~£©S≈ ~£©Sãà ~£©S
+¿ ~£©T	0 ~£©T ~£©T∏ ~£©T® ~£©T ~£©TJ∞ ~£©UI@ ~£©UI0 ~£©Uçp ~£©Uã∞ ~£©Uãx ~£©UãX ~£©UÕÄ ~£©VÀ8 ~£©V ¿ ~£©V@Ä ~£©V
+¿ ~£©VÃÿ ~£©WÀX ~£©WÜp ~£©Wx ~£©W	– ~£©WX ~£©W p ~£©Wçp ~£©[ƒò ~£©[Mp ~£©\x ~£©\ Ä ~£©\Üp ~£©`»8 ~£©`ãX ~£©`F` ~£©ah ~£©aMP ~£©a»X ~£©eI  ~£©lFP ~£©l0 ~£©lç  ~£©s  ~£©á ~£©á	 ~£©á ~£©áK( ~£©ã0 ~£©ã≈∞ ~£©åƒ® ~£©å ¯ ~£©è«Ä ~£©è¬‡ ~£©èê ~£©ìL– ~£©ó0 ~£©ó
+ò ~£©ó
+ ~£©óã8 ~£©õÅ∏ ~£©õ«Ä ~£©õ	H ~£©õ® ~£©ü` ~£©ü ÿ ~£©£ãÄ ~£©£À0 ~£©£«Ä ~£©£ ~£©ß
+¯ ~£©ßÄ ~£©ßJ∏ ~£©ÆF@ ~£©ÆD† ~£©Æ≈p ~£©Øã` ~£©ØãP ~£©Ø ` ~£©≤Œ– ~£©≥À ~£©≥À@ ~£©≥«Ä ~£©≥ƒX ~£©≥å  ~£©≥ä ~£©≥Ä† ~£©≥Lò ~£©¥ÀH ~£©∏É– ~£©∏Ä® ~£©∏CË ~£©∏
+` ~£©∏ã8 ~£©πÑ  ~£©π¿  ~£©π
+áH ~£©π
+√ ~£©∫
+X ~£©∫
+J∞ ~£©∫
+GX ~£©∫CP ~£©»B∞ ~£©»áp ~£©œCH ~£©“ÀP ~£©÷«H ~£©÷áH ~£©÷NH ~£©◊ Ë ~£©‡«p ~£©‡ÿ ~£©‰H ~£©‰ê ~£©‰BX ~£©‰é∏ ~£©Âá` ~£©ÂÇ  ~£©Â«` ~£©ÂŒh ~£©Â…∞ ~£©ÂNò ~£©È ~£©È á ~£©Ï Hò ~£©  ~£©âX ~£©á8 ~£©¬@ ~£©ÒDX ~£©ÒB0 ~£©Òé¯ ~£©ıá` ~£©ıÑh ~£©ıB` ~£©˘B8 ~£©˘` ~£©˘P ~£©˘+∏ ~£©˘+ X ~£©˘+K® ~£©˙+I ~£©˙+A∏ ~£©˙+@Ë ~£©˙+@x ~£©˙+Åÿ ~£©˙+Å ~£©˙,¬p ~£©˛,ÇË ~£©˛,
+† ~£©ˇ*Aà ~£™*Ax ~£™*Ë ~£™*…» ~£™*¡∏ ~£™*â» ~£™)Mò ~£™)C∞ ~£™)ê ~£™) ~£™)P ~£™) ~£™)` ~£™)∞ ~£™'
+∞ ~£™'¿ ~£™'@ ~£™' ~£™'∞ ~£™' ~£™' ® ~£™' à ~£™'E  ~£™'Aÿ ~£™'@ ~£™'@» ~£™'«8 ~£™'√Ë ~£™'¡` ~£™'Üx ~£™(A¿ ~£™(@Ä ~£™(0 ~£™( ~£™(  ~£™( ` ~£™( 0 ~£™(ç ~£™(Ö ~£™(ÄP ~£™(«ê ~£™(«p ~£™(¬` ~£™(¬ ~£™(¡– ~£™&h ~£™&– ~£™&
+H ~£™&0 ~£™&N0 ~£™&J¿ ~£™&E ~£™&Ax ~£™&@0 ~£™&ã¯ ~£™&¡@ ~£™&¿ò ~£™&¿( ~£™%Eh ~£™%C@ ~£™%@‡ ~£™% ~£™%Ã∏ ~£™%≈0 ~£™%âX ~£™%á8 ~£™%Å∞ ~£™%Ä0 ~£™#é( ~£™#é ~£™#å® ~£™#á  ~£™#Ö¯ ~£™#É0 ~£™#Å@ ~£™#Õ0 ~£™#ÀË ~£™#…p ~£™#≈à ~£™#ƒ ~£™#ƒ  ~£™#√0 ~£™#N( ~£™#Kh ~£™#KH ~£™#G ~£™#Fò ~£™#D¯ ~£™#Ah ~£™#¿ ~£™#ò ~£™#
+‡ ~£™#0 ~£™# ~£™#X ~£™#» ~£™#ÿ ~£™#à ~£™#» ~£™# ~£™# ® ~£™# à ~£™#  ~£™$X ~£™$
+‡ ~£™$¯ ~£™$ê ~£™$L∞ ~£™$Fà ~£™$Ä∏ ~£™$¿∏ ~£™$¿0 ~£™!ÀË ~£™!Àò ~£™! ( ~£™!  ~£™!«h ~£™!≈( ~£™!√P ~£™!¬Ä ~£™!¿¿ ~£™!é ~£™!ã¿ ~£™!ãà ~£™!à» ~£™!áÄ ~£™!Ö ~£™! ~£™!ÿ ~£™!KË ~£™!I» ~£™!IP ~£™"À– ~£™"…p ~£™"… ~£™"»¯ ~£™"»p ~£™"«‡ ~£™"¬® ~£™"ãò ~£™"á  ~£™"Ç( ~£™"Ç ~£™"ÅH ~£™"Ë ~£™"ò ~£™"à ~£™"
+‡ ~£™"» ~£™"à ~£™"h ~£™"X ~£™"X ~£™"8 ~£™"N ~£™ "N ~£™ "Iò ~£™ "Hÿ ~£™ "H» ~£™ "G» ~£™ "Gx ~£™  Ãò ~£™! À¿ ~£™! Àh ~£™! ∆8 ~£™! ¡8 ~£™! ¿¿ ~£™! åà ~£™" ã– ~£™" ã¿ ~£™" ä‡ ~£™" â0 ~£™" á ~£™" Çà ~£™" J– ~£™# B† ~£™# Bê ~£™# Aÿ ~£™# H ~£™$ x ~£™$ 
+– ~£™$ç( ~£™$ãh ~£™$Ü  ~£™$ÕX ~£™%Àà ~£™%…ê ~£™%≈Ä ~£™%¡∏ ~£™%Ë ~£™%
+– ~£™%
+∞ ~£™%‡ ~£™%F ~£™&ã( ~£™&É ~£™&ÄÄ ~£™&Àÿ ~£™' ¿ ~£™'∆Ä ~£™'ã¯ ~£™.ãË ~£™.â  ~£™.àX ~£™.É ~£™.À¿ ~£™.ÀX ~£™.J– ~£™/H ~£™/h ~£™/X ~£™/® ~£™/I– ~£™0ÜÄ ~£™0Ñ® ~£™0¿ê ~£™0HX ~£™1àh ~£™4Ñ® ~£™4Ñò ~£™4ãh ~£™8â¿ ~£™8áÿ ~£™8Ü` ~£™8Ñò ~£™8É  ~£™8Kh ~£™<H8 ~£™<	∞ ~£™=Ñx ~£™GKX ~£™J` ~£™K( ~£™Kç0 ~£™XM0 ~£™YK ~£™\ ~£™]Õ0 ~£™]»X ~£™g ~£™n¬ò ~£™nÃ ~£™yBÿ ~£™|à ~£™ÄŒ  ~£™áÀh ~£™á à ~£™á¡∞ ~£™áç¿ ~£™áAH ~£™íÀ– ~£™íÀ® ~£™íÑ∞ ~£™í@ê ~£™íh ~£™ìÑÄ ~£™ñƒ8 ~£™ó¿P ~£™ó@ ~£™öL` ~£™õ( ~£™õ
+ã ~£™•
+√ÿ ~£™•
+J¯ ~£™¶
+
+X ~£™¶	Ã ~£™©	 Ë ~£™©
+H ~£™≠@ ~£™≠MË ~£™≠Gp ~£™≠Õ» ~£™Æäà ~£™Æä0 ~£™ÆÕà ~£™≤Gp ~£™≤CÄ ~£™≤p ~£™≤X ~£™≤p ~£™≤ã ~£™≥áp ~£™≥áX ~£™≥á8 ~£™≥ÇË ~£™≥≈– ~£™¥Bÿ ~£™¥ ¯ ~£™¥N( ~£™¥JH ~£™¥G∞ ~£™¥Gp ~£™¥C  ~£™¥A– ~£™¥¯ ~£™µ X ~£™µé ~£™∂áp ~£™∂É0 ~£™∂Bx ~£™∂( ~£™∂Ä ~£™∂Œ® ~£™∑ŒX ~£™∫«( ~£™∫á` ~£™ªÇ– ~£™ª` ~£™ªH ~£™ª8 ~£™ªà ~£™ª á8 ~£™ø Ç  ~£™ø «( ~£™ø ¬0 ~£™ø ¬ ~£™ø G ~£™¿ Fp ~£™¿Àh ~£™√«` ~£™√«H ~£™√∆  ~£™√ãê ~£™ƒâH ~£™ƒÖÄ ~£™ƒÑ® ~£™ƒÑx ~£™ƒÇ@ ~£™ƒK† ~£™≈H¯ ~£™≈G` ~£™≈à ~£™≈H ~£™≈  ~£™≈Ñò ~£™∆Çp ~£™∆«` ~£™∆¬Ä ~£™∆¬X ~£™∆KÄ ~£™«KX ~£™«H ~£™«+I∏ ~£™«+A» ~£™«+@ÿ ~£™«+8 ~£™»+ ~£™»+0 ~£™»+Ë ~£™»+â® ~£™»,¬0 ~£™Ã,¬  ~£™Ã*	– ~£™÷*B  ~£™◊*¡Ë ~£™◊)…¯ ~£™⁄)…ÿ ~£™⁄)D ~£™ﬁ'ƒ ~£™ﬁ'√ ~£™ﬁ'¡à ~£™ﬁ'Ö® ~£™ﬂ'Öò ~£™ﬂ'É¯ ~£™ﬂ'Ç∏ ~£™ﬂ'Çx ~£™ﬂ'Ä0 ~£™ﬂ'IÄ ~£™‡'E– ~£™‡'DP ~£™‡'D0 ~£™‡'P ~£™‡'∞ ~£™‡(Nò ~£™·(I  ~£™·(GP ~£™·(@ ~£™·(@ ~£™·( ~£™·(∞ ~£™·(éX ~£™‚(ä ~£™‚(Õ¿ ~£™‚(¬ê ~£™‚&L( ~£™‚&I ~£™‚&@P ~£™‚&@  ~£™‚&	X ~£™„&P ~£™„&  ~£™„& – ~£™„& 0 ~£™„&Õ¯ ~£™‰&…h ~£™‰&«` ~£™‰&∆ ~£™‰&¿à ~£™‰&¿X ~£™‰&ã– ~£™Â&ä¿ ~£™Â&â ~£™Â&à` ~£™Â&Ä( ~£™Â%– ~£™Â%
+∏ ~£™Â%ò ~£™Â%JH ~£™Ê%âh ~£™È%Ö† ~£™È%Ö0 ~£™È#ã– ~£™Í#ãò ~£™Í#ãà ~£™Í#ãX ~£™Í#Ö∏ ~£™Í#Ä‡ ~£™Í#Ä` ~£™Í#Ä ~£™Í#À– ~£™Î#∆ò ~£™Î#√† ~£™Î#M ~£™Î#L® ~£™Î#Lx ~£™Î#KË ~£™Î#Kà ~£™Î#J‡ ~£™Î#– ~£™Ï#
+H ~£™Ï#	X ~£™Ï# ~£™Ï# ~£™Ï#ò ~£™Ï#Ë ~£™Ï#ò ~£™Ï# ∏ ~£™Ï# X ~£™Ï$à ~£™Ì$
+ ~£™Ì$@ ~£™Ì$K– ~£™Ó$J‡ ~£™Ó$Öÿ ~£™Ó$…X ~£™Ó"ãË ~£™Ô"ã– ~£™Ô"ãx ~£™Ô"ãh ~£™Ô"ä8 ~£™Ô"á ~£™Ô"Çh ~£™Ô"Å ~£™Ô"Àh ~£™"ƒà ~£™"Là ~£™"IX ~£™"H8 ~£™"G‡ ~£™"Gh ~£™"Dò ~£™"CH ~£™"Ax ~£™"x ~£™Ò"h ~£™Ò!Lò ~£™Ò!J‡ ~£™Ò!GH ~£™Ò!F ~£™Ò!p ~£™Ú!8 ~£™Ú! ¿ ~£™Ú! ò ~£™Ú! H ~£™Ú!…¯ ~£™Ú!√∞ ~£™Ú!¿ ~£™Ú!é ~£™Û!ç ~£™Û!åà ~£™Û!ãX ~£™Û!ä– ~£™Û!â» ~£™Û!âò ~£™Û!É  ~£™Û ∆ ~£™Ù ≈x ~£™Ù ¿– ~£™Ù ¿∞ ~£™Ù ¿ê ~£™Ù ç† ~£™ı Åp ~£™ı M† ~£™ı à ~£™ˆçê ~£™ˆãx ~£™ˆãX ~£™ˆàÿ ~£™ˆÉ  ~£™ˆÃË ~£™˜ ¿ ~£™˜…0 ~£™˜≈– ~£™˜≈† ~£™˜√ ~£™˜√  ~£™˜Kà ~£™˜G` ~£™˜A∏ ~£™˜Ä ~£™¯à ~£™¯
+ò ~£™¯† ~£™¯ ê ~£™¯ãH ~£™˘ä¿ ~£™˘Õê ~£™˘∆p ~£™˘à ~£™˘»» ~£™˝∆Ä ~£™˝ãà ~£™˝ä¿ ~£™˝KX ~£™˛K8 ~£™˛Hh ~£™˛ ~£™˛∏ ~£™˛àH ~£™ˇKX ~£´– ~£´p ~£´ãx ~£´	Õ` ~£´		¿ ~£´Fp ~£´C ~£´ãX ~£´@ ~£´"	ê ~£´"À8 ~£´"ä∞ ~£´"F‡ ~£´)C ~£´)	  ~£´-¿ ~£´-M  ~£´-Õ  ~£´1† ~£´1ä∏ ~£´2ÉH ~£´2Çp ~£´2√  ~£´2H8 ~£´2	® ~£´3ç@ ~£´3å‡ ~£´3ÄX ~£´3p ~£´7– ~£´7X ~£´7
+  ~£´7Jò ~£´7Bh ~£´7B ~£´7ÇË ~£´8 ∞ ~£´8P ~£´8∏ ~£´8p ~£´8 ` ~£´8ò ~£´<D– ~£´<AP ~£´<Å» ~£´=B ~£´@¯ ~£´A¡‡ ~£´D ~£´D
+x ~£´D† ~£´DN∞ ~£´EÀ¯ ~£´EÀò ~£´EKx ~£´IHP ~£´IG8 ~£´IÀ  ~£´SÄ ~£´W  ~£´W@ ~£´W∞ ~£´[ ~£´[ÿ ~£´[Ãê ~£´_¿X ~£´_
+0 ~£´f
+B ~£´f	J» ~£´f	Éà ~£´f	«H ~£´g ® ~£´g«p ~£´gÉ8 ~£´gG8 ~£´hFp ~£´h√ê ~£´oDË ~£´qá` ~£´tÉ  ~£´tÇ» ~£´tÀÄ ~£´u«p ~£´uN  ~£´uI¿ ~£´uB ~£´uB® ~£´u ~£´v8 ~£´yp ~£´yÕË ~£´}Äÿ ~£´` ~£´ÉéÄ ~£´ÉÇ† ~£´ÉÇà ~£´ÉÅ‡ ~£´Éá8 ~£´áŒ@ ~£´á≈ ~£´á À∞ ~£´é »ÿ ~£´é «P ~£´é ¬  ~£´é ã∞ ~£´è áP ~£´è Öê ~£´è x ~£´èBP ~£´ìP ~£´ìãà ~£´ìá` ~£´ìáH ~£´ìá( ~£´ìÀê ~£´î¬ ~£´îN– ~£´îG` ~£´îGH ~£´îF ~£´î` ~£´ïá8 ~£´ïŒ∞ ~£´ï+B  ~£´ñ+@» ~£´ñ+@  ~£´ñ+Ë ~£´ñ+¿ê ~£´ñ+Ö8 ~£´ó,É ~£´ó,Ç» ~£´ó,»∏ ~£´ó,√X ~£´ó,¬P ~£´ó, ~£´ô*	® ~£´†*¡ ~£´£)Äx ~£´ß)¡¯ ~£´ß)F  ~£´ß)E` ~£´ß)C¿ ~£´ß)Cê ~£´ß)† ~£´®)– ~£´®)p ~£´®)P ~£´®)  ~£´®)† ~£´®'«` ~£´©'ƒà ~£´©'ƒH ~£´©'ƒ8 ~£´©'Üò ~£´©'Üà ~£´©'ÖË ~£´©'Å ~£´©'G∏ ~£´™'D– ~£´™'Dp ~£´™'
+H ~£´™'P ~£´™'¿ ~£´™'ê ~£´™'¿ ~£´™' ~£´™(E0 ~£´´(	h ~£´´(` ~£´´(«† ~£´¨(≈@ ~£´¨(≈ ~£´¨(≈ ~£´¨(√P ~£´¨(à† ~£´¨(É8 ~£´¨(ÅP ~£´¨&À– ~£´≠& ¿ ~£´≠&«‡ ~£´≠&«† ~£´≠&¡‡ ~£´≠&¿x ~£´≠&ã» ~£´Æ&á` ~£´Æ&J ~£´Æ&D¯ ~£´Æ&
+ ~£´Æ%	p ~£´Ø%0 ~£´Ø%  ~£´Ø%C ~£´Ø%AP ~£´Ø%@ ~£´Ø%ŒÄ ~£´∞%…h ~£´∞%…X ~£´∞%ã– ~£´∞%áP ~£´∞%Ä ~£´∞#ç¿ ~£´±#ã® ~£´±#ä‡ ~£´±#ä– ~£´±#ÅP ~£´±#Äp ~£´±#» ~£´±#≈» ~£´±#ƒ  ~£´±#√P ~£´±#¡@ ~£´±#ÿ ~£´≤#∏ ~£´≤#h ~£´≤# x ~£´≤#K® ~£´≥#G  ~£´≥#E¯ ~£´≥#@0 ~£´≥$MÄ ~£´≥$J ~£´≥$@ ~£´≥$ò ~£´¥$  ~£´¥$∞ ~£´¥$ç¯ ~£´¥$Ä0 ~£´¥$ƒp ~£´µ"å® ~£´µ"â0 ~£´µ"à ~£´µ"Ü0 ~£´µ"ÇX ~£´µ"Äh ~£´µ" – ~£´∂"∆à ~£´∂"∆  ~£´∂"≈X ~£´∂"¿X ~£´∂"Lò ~£´∂"K¿ ~£´∂"J‡ ~£´∂"H¯ ~£´∂"F† ~£´∂"Bh ~£´∂"@® ~£´∑"@8 ~£´∑"
+– ~£´∑"∏ ~£´∑"H ~£´∑"à ~£´∑"x ~£´∑!Kò ~£´∏!† ~£´∏!à ~£´∏!ò ~£´∏!Àà ~£´π! ‡ ~£´π!…p ~£´π!…@ ~£´π!≈H ~£´π!¡† ~£´π!¿– ~£´π!ãx ~£´∫!ä‡ ~£´∫!âË ~£´∫!â` ~£´∫!áh ~£´∫!á ~£´∫!Ü  ~£´∫!Ö– ~£´∫!ÉP ~£´∫ Õ† ~£´ª Ãx ~£´ª À– ~£´ª Àà ~£´ª Àx ~£´ª … ~£´ª ãò ~£´º ÅÄ ~£´º 
+® ~£´º – ~£´º MÄ ~£´º J¿ ~£´º CP ~£´ºÜ@ ~£´ΩÀò ~£´ΩÀh ~£´Ω≈0 ~£´ΩHÿ ~£´æF† ~£´æ	 ~£´æ∏ ~£´æãx ~£´æàx ~£´æÀH ~£´ø ~£´øK¯ ~£´√Kh ~£´√D∏ ~£´√Ë ~£´√ò ~£´√ ê ~£´√ Ä ~£´√åË ~£´ƒä– ~£´ƒàh ~£´ƒÄÄ ~£´ƒÀà ~£´ƒ√ ~£´ƒãx ~£´≈∆Ä ~£´≈¿∞ ~£´≈Kx ~£´≈ ~£´≈Fp ~£´∆` ~£´∆çp ~£´∆»h ~£´∆X ~£´Õâ¿ ~£´—»X ~£´—P ~£´’M@ ~£´‹@  ~£´‹¿ ~£´ﬂM@ ~£´„ãH ~£´Ò( ~£´Ú‡ ~£´Ú»X ~£´˘	  ~£´¸ç ~£¨ ç  ~£¨ Ü ~£¨ ‡ ~£¨ Ä8 ~£¨¡∞ ~£¨KH ~£¨J® ~£¨J@ ~£¨
+x ~£¨Ä ~£¨Õ  ~£¨…® ~£¨ ¯ ~£¨	M  ~£¨	P ~£¨	ò ~£¨	é ~£¨äò ~£¨Åp ~£¨ƒ  ~£¨ãà ~£¨Ã‡ ~£¨ê ~£¨@‡ ~£¨Dp ~£¨h ~£¨Ã ~£¨Ã  ~£¨¡ ~£¨åH ~£¨Ä∞ ~£¨Ã0 ~£¨ÑP ~£¨X ~£¨0 ~£¨J‡ ~£¨"D ~£¨"ä ~£¨%
+å‡ ~£¨,
+É ~£¨,
+É∏ ~£¨,
+C ~£¨-	√– ~£¨4√p ~£¨7áp ~£¨8Fê ~£¨8p ~£¨8Àê ~£¨F√ ~£¨F‡ ~£¨MN∏ ~£¨M  ~£¨MáX ~£¨QG` ~£¨Q ~£¨QáH ~£¨RÇx ~£¨R¬∞ ~£¨RÇ∏ ~£¨R¬‡ ~£¨S¬» ~£¨S¬  ~£¨SB¿ ~£¨SB® ~£¨SKh ~£¨WGP ~£¨WGH ~£¨W` ~£¨W ~£¨WÀx ~£¨XÄ ~£¨[Àp ~£¨b G` ~£¨b GP ~£¨b D8 ~£¨b » ~£¨c P ~£¨c ÿ ~£¨c ≈¿ ~£¨c á` ~£¨d+ÿ ~£¨i+¡» ~£¨i,é8 ~£¨m,â( ~£¨m,Ç∏ ~£¨m,Å– ~£¨m,√h ~£¨n,√8 ~£¨n, ~£¨n,B8 ~£¨n,B ~£¨n*¯ ~£¨o*IÄ ~£¨o*AË ~£¨o*Aò ~£¨o*…– ~£¨o*…∏ ~£¨o)  ~£¨s)P ~£¨s)  ~£¨s) ~£¨s) ~£¨s)– ~£¨s)` ~£¨s)‡ ~£¨s)` ~£¨s)  ~£¨s)D– ~£¨t)C‡ ~£¨t)B0 ~£¨t)B  ~£¨t)¬0 ~£¨x'
+– ~£¨y'
+¿ ~£¨y'@ ~£¨y'‡ ~£¨y'P ~£¨y'– ~£¨y' ò ~£¨y'GH ~£¨y'Fÿ ~£¨y'E0 ~£¨y'C‡ ~£¨y'C– ~£¨y'  ~£¨z'«H ~£¨z'≈ ~£¨z'¿‡ ~£¨z'¿  ~£¨z'áP ~£¨{'Ñ8 ~£¨{'Ä@ ~£¨{(G` ~£¨{(H ~£¨|(P ~£¨|( ~£¨|(P ~£¨|(…Ë ~£¨|(«¿ ~£¨|(«∞ ~£¨|(¬‡ ~£¨|(¬  ~£¨|(àÄ ~£¨}&»Ë ~£¨}&¡∞ ~£¨}&â ~£¨}&Ö† ~£¨}&Å  ~£¨}&Ä ~£¨}&JH ~£¨~&I¯ ~£¨~&@– ~£¨~&à ~£¨& ( ~£¨% ¿ ~£¨%…p ~£¨%√@ ~£¨%¡ ~£¨%å¯ ~£¨%Ö  ~£¨%É@ ~£¨%† ~£¨Ä%x ~£¨Ä% ~£¨Ä%† ~£¨Ä%Aà ~£¨Å#äH ~£¨Å#Üò ~£¨Å#Ñê ~£¨Å#Å` ~£¨Å#Ä– ~£¨Å#Äê ~£¨Å#Ä0 ~£¨Å#Œh ~£¨Ç#ŒX ~£¨Ç#Ãò ~£¨Ç#Àò ~£¨Ç#Àà ~£¨Ç# ‡ ~£¨Ç#»  ~£¨Ç#≈ ~£¨Ç#¡0 ~£¨Ç#¿‡ ~£¨Ç#¿0 ~£¨Ç#ò ~£¨É#à ~£¨É#® ~£¨É#¯ ~£¨É#Ë ~£¨É#p ~£¨É#  ~£¨É#@ ~£¨É#¯ ~£¨É#X ~£¨É#® ~£¨É# ¯ ~£¨É#Lò ~£¨Ö#K– ~£¨Ö#Kò ~£¨Ö#Fà ~£¨Ö#Eò ~£¨Ö#Dh ~£¨Ö#D( ~£¨Ö#Cò ~£¨Ö#Cà ~£¨Ö#Cx ~£¨Ö#Ax ~£¨Ö#A@ ~£¨Ö#@– ~£¨Ö#@∏ ~£¨Ö#@ ~£¨Ö$Ë ~£¨á$Ä ~£¨á$x ~£¨á$® ~£¨á$à ~£¨á$Ä ~£¨á$G® ~£¨à$Fx ~£¨à$DË ~£¨à$C ~£¨à$@– ~£¨à$@0 ~£¨à$Õÿ ~£¨à$  ~£¨à$ ∏ ~£¨à$≈x ~£¨à$≈  ~£¨à$éÿ ~£¨â$é» ~£¨â$ä ~£¨â$Ö  ~£¨â$Ö ~£¨â$É ~£¨â"K® ~£¨ä"Kò ~£¨ä"JH ~£¨ä"G∏ ~£¨ä"FP ~£¨ä"E» ~£¨ä"Ah ~£¨ä"A ~£¨ä"@¯ ~£¨ä"@Ë ~£¨ä"® ~£¨ã"h ~£¨ã"x ~£¨ã"ä‡ ~£¨å"âp ~£¨å"à¯ ~£¨å"Üx ~£¨å"ÀË ~£¨å" ® ~£¨å"» ~£¨å"« ~£¨å"«@ ~£¨å"∆h ~£¨å"≈H ~£¨å"¿x ~£¨å!À¿ ~£¨ç!À® ~£¨ç!Àx ~£¨ç!…` ~£¨ç!√p ~£¨ç!¬ê ~£¨ç!¬  ~£¨ç!¿ ~£¨ç!¿† ~£¨ç!ãò ~£¨é!â∏ ~£¨é!Ü  ~£¨é!Ü ~£¨é!Ö ~£¨é!Ç¿ ~£¨é!ò ~£¨è!h ~£¨è!	 ~£¨è!† ~£¨è!( ~£¨è!» ~£¨è! x ~£¨è! h ~£¨è!J– ~£¨ê!Jò ~£¨ê!I ~£¨ê!F  ~£¨ê á– ~£¨ë Ä† ~£¨ë Äp ~£¨ë … ~£¨ë «Ä ~£¨ë ƒÿ ~£¨ë J‡ ~£¨í C¿ ~£¨í C` ~£¨í  ~£¨í 
+¿ ~£¨íÕ ~£¨ì – ~£¨ì≈‡ ~£¨ì≈` ~£¨ì≈  ~£¨ìçX ~£¨ìç ~£¨ìâ0 ~£¨ìÜ` ~£¨ìÜ ~£¨ìMê ~£¨îJ– ~£¨îD∏ ~£¨îA® ~£¨î¿ ~£¨ïx ~£¨ï∞ ~£¨ï‡ ~£¨ïƒ∏ ~£¨ï¿Ä ~£¨ïçê ~£¨ñL† ~£¨ñKX ~£¨ñ@Ä ~£¨ñx ~£¨ñMê ~£¨óK¿ ~£¨óKx ~£¨óJ¿ ~£¨óD® ~£¨óC ~£¨ó@ê ~£¨ó
+¿ ~£¨ó∏ ~£¨ó – ~£¨ò¿ê ~£¨òÜÄ ~£¨òI– ~£¨úHH ~£¨úƒ® ~£¨úâ¿ ~£¨ú∆p ~£¨ùFp ~£¨§@ê ~£¨§á» ~£¨§Ä  ~£¨§…¿ ~£¨§ò ~£¨•I¿ ~£¨•Àh ~£¨•	† ~£¨¨` ~£¨¨0 ~£¨¨ÕP ~£¨¨MP ~£¨∞H8 ~£¨∞ÀX ~£¨¥ÀH ~£¨¥√0 ~£¨¥Dÿ ~£¨∑  ~£¨∏Dà ~£¨∫ ~£¨ª«Ä ~£¨ªÀ‡ ~£¨Ã∆¿ ~£¨ÃÖ– ~£¨Ãê ~£¨Ãã( ~£¨–Ö† ~£¨–H ~£¨‘¿» ~£¨‘¿® ~£¨‘áÄ ~£¨‘ê ~£¨’Ä ~£¨’h ~£¨’
+@ ~£¨’X ~£¨’L‡ ~£¨’»X ~£¨’«ê ~£¨’å ~£¨÷8 ~£¨÷   ~£¨÷H ~£¨÷A∏ ~£¨◊A@ ~£¨◊¿ ~£¨◊Œ ~£¨◊ 0 ~£¨◊ä® ~£¨€
+ò ~£¨ﬂC` ~£¨ﬂB ~£¨ﬂ( ~£¨ﬂò ~£¨ﬂP ~£¨ﬂK` ~£¨‡KP ~£¨‡F0 ~£¨‡¡0 ~£¨‰@Ë ~£¨‰
+  ~£¨‰Ä ~£¨‰ƒê ~£¨‰Å ~£¨ÂÄ ~£¨ÂK( ~£¨Ô ~£¨ÔÃÄ ~£¨Û«Ä ~£¨Û
+Ã– ~£¨Û
+«Ä ~£¨Û
+K ~£¨˜
+ ~£¨˜
+
+† ~£¨˜	ä¯ ~£¨¯	Fp ~£¨˚¿Ë ~£¨¸É` ~£¨¸C8 ~£¨¸ÉH ~£≠ Jò ~£≠ò ~£≠8 ~£≠Àp ~£≠À` ~£≠…8 ~£≠† ~£≠p ~£≠( ~£≠Nê ~£≠B† ~£≠Bê ~£≠Bh ~£≠Ë ~£≠  ~£≠ã8 ~£≠¬x ~£≠G8 ~£≠F ~£≠Bà ~£≠` ~£≠Kx ~£≠$G8 ~£≠$E ~£≠$x ~£≠%
+p ~£≠%x ~£≠%ÿ ~£≠%¯ ~£≠%Ä  ~£≠)8 ~£≠) ~£≠)é¿ ~£≠- Hÿ ~£≠0 G8 ~£≠0 «H ~£≠4 « ~£≠4 ƒx ~£≠4 áH ~£≠5 Ü ~£≠5 Ç ~£≠5+Aÿ ~£≠5+ÿ ~£≠5+ ( ~£≠5+ÄË ~£≠6+Äÿ ~£≠6+¿¿ ~£≠6+¿∞ ~£≠6,à¯ ~£≠6,»X ~£≠7,»H ~£≠7,¬¯ ~£≠7,B( ~£≠7*A® ~£≠=)Ä ~£≠G)¿ ~£≠G)0 ~£≠G) ~£≠G)¿ ~£≠G)F` ~£≠H)FP ~£≠H)EÄ ~£≠H)EP ~£≠H)DÄ ~£≠H)Äh ~£≠H'JX ~£≠L'E∞ ~£≠L'DÄ ~£≠L'AË ~£≠L'@‡ ~£≠L'@∏ ~£≠L'@@ ~£≠L'@( ~£≠L'ê ~£≠M'† ~£≠M'Ä ~£≠M'† ~£≠M' ( ~£≠M'√ò ~£≠N'¿@ ~£≠N'äX ~£≠N'áH ~£≠N'ÜË ~£≠N'ÜH ~£≠N'É∏ ~£≠N'Å` ~£≠N(Nà ~£≠O(P ~£≠O(¿ ~£≠O(` ~£≠O( ê ~£≠O(Œ ~£≠P(¬Ä ~£≠P(¡‡ ~£≠P(é8 ~£≠P(å ~£≠P& H ~£≠P&»¯ ~£≠P&» ~£≠P&«¿ ~£≠P&¬p ~£≠P&¡† ~£≠P&¡P ~£≠P&¿® ~£≠P&àP ~£≠R&É@ ~£≠R&ÅP ~£≠R&Hê ~£≠R&GP ~£≠R&G8 ~£≠R&¯ ~£≠R%…Ä ~£≠V%¡à ~£≠V%IÄ ~£≠V%G8 ~£≠V%E0 ~£≠V%h ~£≠W%® ~£≠W%@ ~£≠W#âp ~£≠W#â  ~£≠W#Ö® ~£≠W#Ö  ~£≠W#ÄÄ ~£≠W#Ä ~£≠W#Ã® ~£≠X#Ãà ~£≠X#« ~£≠X#«– ~£≠X#«P ~£≠X#√ ~£≠X#√` ~£≠X#¿ ~£≠X#
+‡ ~£≠Y#
+8 ~£≠Y#  ~£≠Y#» ~£≠Y#h ~£≠Y#8 ~£≠Y# h ~£≠Y#JH ~£≠Z#HË ~£≠Z#A ~£≠Z#@¯ ~£≠Z#@ ~£≠Z$ã  ~£≠[$ä® ~£≠[$Å ~£≠[$Õê ~£≠[$Õx ~£≠[$∆ÿ ~£≠[$L® ~£≠\$Lò ~£≠\$K∞ ~£≠\$Fò ~£≠\$– ~£≠\$
+‡ ~£≠\$ ~£≠\$ ~£≠\$0 ~£≠\$– ~£≠\$  ~£≠\"Nh ~£≠]"KË ~£≠]"Kx ~£≠]"J– ~£≠]"Gà ~£≠]"GH ~£≠]"D ~£≠]"D ~£≠]"C∏ ~£≠]"A¯ ~£≠]"Aà ~£≠]" ~£≠_"8 ~£≠_"
+8 ~£≠_"	p ~£≠_"Õ( ~£≠_"À– ~£≠_"À® ~£≠_"Àà ~£≠_" ‡ ~£≠_"«» ~£≠_"∆ ~£≠_"é( ~£≠`"åò ~£≠`"á∏ ~£≠`"Ü  ~£≠`"ÅË ~£≠`!áH ~£≠a!á( ~£≠a!Ö† ~£≠a!ÖÄ ~£≠a!Œ ~£≠a!Õx ~£≠a!Ãx ~£≠a! – ~£≠a!≈h ~£≠a!¬p ~£≠a!¡ê ~£≠a!x ~£≠b!à ~£≠b!Ä ~£≠b!Kx ~£≠c!Iÿ ~£≠c!I∏ ~£≠c!I  ~£≠c!H® ~£≠c!GX ~£≠c!F∞ ~£≠c!F0 ~£≠c!F  ~£≠c åx ~£≠d Å` ~£≠d ÄÄ ~£≠d  – ~£≠d ƒ¯ ~£≠d ¬à ~£≠d M ~£≠e K¿ ~£≠e I ~£≠e AË ~£≠e † ~£≠f ê ~£≠f 
+– ~£≠fÕ† ~£≠fÕÄ ~£≠fÕH ~£≠fÀx ~£≠f≈P ~£≠f≈@ ~£≠fç† ~£≠gå¯ ~£≠gå ~£≠gä– ~£≠gÑ∏ ~£≠gÄê ~£≠gKx ~£≠hF‡ ~£≠hF¿ ~£≠h	@ ~£≠hÀ∞ ~£≠hÀ ~£≠h ∞ ~£≠hƒò ~£≠h¿ê ~£≠hãË ~£≠iã∞ ~£≠iÄê ~£≠iKx ~£≠jê ~£≠jê ~£≠j¿ ~£≠j∞ ~£≠j
+– ~£≠jÀË ~£≠nÀx ~£≠nçê ~£≠nä∞ ~£≠nâ0 ~£≠n ~£≠vFÄ ~£≠|Õp ~£≠Ä∆Ä ~£≠áàH ~£≠é¬ ~£≠éI¿ ~£≠éI∞ ~£≠éBP ~£≠é@ ~£≠é¿ ~£≠è ò ~£≠ñ∆` ~£≠ôâ` ~£≠ôÑ¯ ~£≠ôM0 ~£≠ùKH ~£≠ùH‡ ~£≠ùã8 ~£≠°Õ@ ~£≠°ç0 ~£≠¨ ® ~£≠≠† ~£≠∞Ä ~£≠∞M ~£≠±∆– ~£≠±ä@ ~£≠± ~£≠±I ~£≠≤GÄ ~£≠≤L ~£≠≤Ax ~£≠≤AH ~£≠≤Ç¯ ~£≠∂Å@ ~£≠∂Ä( ~£≠√ ∏ ~£≠ƒ¡Ë ~£≠ƒ¡ÿ ~£≠ƒãÿ ~£≠ƒãê ~£≠ƒKË ~£≠≈É  ~£≠»– ~£≠Ãp ~£≠Ãê ~£≠ÃJ ~£≠ÃéÄ ~£≠”ã‡ ~£≠”À` ~£≠‘ ~£≠‘ ÿ ~£≠‘ p ~£≠‘é‡ ~£≠€∏ ~£≠€áÄ ~£≠ﬂ¿ ~£≠‚GÄ ~£≠„áÄ ~£≠„Öx ~£≠„ƒ0 ~£≠„
+Õ ~£≠‰	Õ  ~£≠Ó	JË ~£≠Ò	Jê ~£≠Ò	@ ~£≠Ú	
+Ä ~£≠Ú	
+p ~£≠Ú	† ~£≠Ú«H ~£≠ÚÜ  ~£≠Û Ë ~£≠˙çò ~£≠˙Éê ~£≠˙p ~£≠˙À ~£≠˛«X ~£≠˛Ç@ ~£≠˛Å ~£≠˛Gp ~£≠˛A ~£≠˛0 ~£≠ˇp ~£≠ˇ@Ë ~£≠ˇË ~£Æ  h ~£Æ √@ ~£Æ ( ~£Æ∏ ~£ÆX ~£ÆGp ~£ÆGH ~£ÆÇX ~£ÆŒp ~£Æ«p ~£Æ«` ~£ÆB– ~£Æ¿ ~£ÆéP ~£ÆÇ® ~£ÆÀ ~£ÆB0 ~£ÆA¯ ~£ÆÇ( ~£Æ p ~£Æ¬P ~£Æ` ~£ÆG( ~£ÆB` ~£Æäê ~£Æâò ~£Æá` ~£Æ¡– ~£Æ ¿ ~£Æ ∏ ~£Æ 
+@ ~£Æ ¿ ~£Æ K¿ ~£Æ F  ~£Æ B  ~£Æ ãò ~£Æ «` ~£Æ+ ~£Æ+ ò ~£Æ+ h ~£Æ+B¯ ~£Æ+BË ~£Æ+Ö ~£Æ+Äp ~£Æ+Ã8 ~£Æ,àÿ ~£Æ, – ~£Æ*B@ ~£Æ*	‡ ~£Æ*0 ~£Æ*¡ÿ ~£Æ*¡® ~£Æ*Ç8 ~£Æ*Å» ~£Æ)@ ~£Æ)¿ ~£Æ)∞ ~£Æ)p ~£Æ)‡ ~£Æ)¿ ~£Æ)p ~£Æ)P ~£Æ)  ~£Æ)† ~£Æ)Mp ~£Æ)J  ~£Æ)F∞ ~£Æ)E‡ ~£Æ)CÄ ~£Æ'
+X ~£Æ!'	X ~£Æ!' ~£Æ!'† ~£Æ!'p ~£Æ!'– ~£Æ!'p ~£Æ!'‡ ~£Æ!'G ~£Æ"'D∞ ~£Æ"'Dê ~£Æ"'D  ~£Æ"'D  ~£Æ"'@® ~£Æ"'…X ~£Æ#'ƒ® ~£Æ#'√∏ ~£Æ#'Üh ~£Æ#'Ü( ~£Æ#'Öà ~£Æ#'Ñ∏ ~£Æ#'Ñà ~£Æ#'Ñ ~£Æ#'Ä( ~£Æ#(I0 ~£Æ$(G8 ~£Æ$(A∞ ~£Æ$(	Ä ~£Æ%( † ~£Æ%(√8 ~£Æ%(¬ ~£Æ%(¬∞ ~£Æ%(Ö@ ~£Æ&(ÉP ~£Æ&(Å¿ ~£Æ&(Ä  ~£Æ&&K¯ ~£Æ&&I  ~£Æ&&A∞ ~£Æ&&@@ ~£Æ&&
+– ~£Æ'&
+8 ~£Æ'&∞ ~£Æ'& ~£Æ'&   ~£Æ'&Õ¿ ~£Æ'&≈0 ~£Æ'&¡` ~£Æ'&¡0 ~£Æ'&àê ~£Æ(&Å@ ~£Æ(&Ä ~£Æ(%ç ~£Æ(%ã∏ ~£Æ(%É ~£Æ(%Åà ~£Æ(%Ã» ~£Æ)%À– ~£Æ)%À∏ ~£Æ)%¡∞ ~£Æ)%ÿ ~£Æ*%0 ~£Æ*%Ë ~£Æ*%@ ~£Æ*%N ~£Æ*%MH ~£Æ*#ÿ ~£Æ+#® ~£Æ+#	0 ~£Æ+#‡ ~£Æ+#@ ~£Æ+#à ~£Æ+#h ~£Æ+#0 ~£Æ+#∏ ~£Æ+#® ~£Æ+# ~£Æ+#à ~£Æ+#x ~£Æ+# H ~£Æ+#N ~£Æ,#J‡ ~£Æ,#Jò ~£Æ,#GP ~£Æ,#F@ ~£Æ,#E ~£Æ,#D8 ~£Æ,#ãH ~£Æ-#àË ~£Æ-#á ~£Æ-#Ü0 ~£Æ-#ÑÄ ~£Æ-#É  ~£Æ-#Åê ~£Æ-#Ä† ~£Æ-#ÄP ~£Æ-#Ä  ~£Æ-#ŒH ~£Æ.#¡† ~£Æ.#¿p ~£Æ.$çh ~£Æ/$Üò ~£Æ/$Üà ~£Æ/$Ä ~£Æ/$ÕX ~£Æ0$«P ~£Æ0$X ~£Æ0$  ~£Æ0$GP ~£Æ0"M® ~£Æ1"Lÿ ~£Æ1"K– ~£Æ1"Kà ~£Æ1"H® ~£Æ1"G® ~£Æ1"Gò ~£Æ1"GX ~£Æ1"Dà ~£Æ1"CË ~£Æ1"CX ~£Æ1"Aÿ ~£Æ1"AH ~£Æ1"@» ~£Æ1"@∏ ~£Æ1"@X ~£Æ1"0 ~£Æ2"H ~£Æ2" ~£Æ3"ò ~£Æ3"– ~£Æ3"
+( ~£Æ3"¯ ~£Æ3

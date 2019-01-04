@@ -1,0 +1,58 @@
+[paths]
+path_wd = ./models/report/DVS63_EVTACC_10E
+#path_wd = ./models/report/DVS63_EVTACC_MAXPOOL_L2_10E
+#path_wd = ./models/report/DVS63_EVTACC_AVGPOOL_L2_10E
+#path_wd = ./models/report/dvs36_evtacc_maxpool_B0_10E
+#path_wd = ./models/report/dvs36_evtacc_avgpool_B0_30E
+#path_wd = ./models/report/dvs36_evtacc_maxpool_B0_10E_singlesub
+dataset_path = ./models/data/aedat/balanced_100
+#dataset_path = ./models/data/aedat/plot
+filename_ann = weights.09-0.39
+#filename_ann = weights.09-0.40
+#filename_ann = weights.09-0.37
+#filename_ann = weights.09-0.38
+#filename_ann = weights.09-0.40
+#filename_ann = weights.09-0.39
+
+
+
+[tools]
+evaluate_ann = False
+normalize = True
+
+[normalization]
+percentile = 99.9
+
+[simulation]
+simulator = INI
+duration = 250
+num_to_test = 400
+batch_size = 1
+
+[conversion]
+softmax_to_relu = False
+
+[input]
+poisson_input = True
+num_poisson_events_per_sample = -1
+input_rate = 200
+dataset_format = aedat
+eventframe_width = 10
+num_dvs_events_per_sample = 5000
+label_dict = {"N": "0", "L": "1", "C": "2", "R": "3",}
+chip_size = (240,180)
+frame_gen_method = rectified_sum
+#frame_gen_method = signed_sum
+is_x_first = True
+is_x_flipped = True
+is_y_flipped = True
+
+[cell]
+#reset = Reset to zero
+
+[output]
+#log_vars = {'mem_n_b_l_t'}
+#plot_vars = {'spiketrains'}
+#plot_vars = {'all'}
+#plot_vars = {'spikerates'}
+#plot_vars = {'confusion_matrix'}
