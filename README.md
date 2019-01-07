@@ -6,7 +6,7 @@ In this project object recognition in the context of a robotics predator/prey na
 Contents
 --------
 
-```bash
+```
 /ANN: contains the python sourcecode used to process the predator/prey dataset and to train the ANN models
     - aedat_cutter.py: This module was used to slice .aedat recordings to get seperate and labeled DVS samples to be used as testset.
     - aps.py: This module was used to extract aps frames from DAVIS .avi recordings. The frames can be supsampled and the number of samples can be increased over-/underexposing pixel intensities. 3-sigma clipping around mean pixel intensities and scaling to [0,1] to optain greyscale images.
@@ -31,7 +31,7 @@ Contents
         dvs36_evtacc_maxpool_B0_singlesub: same as dvs36_evtacc_maxpool_B0 with DVS dataset used where only one event is kept during subsampling of a patch
 ```
     
-```bash    
+```    
 /spiNNaker:
     - plot_measurements.py: Script used to plot the measured spiketrains and membrane potentials
     - spiNN_MLP_test.py: This module holds a pyNN implementation of a multilayer perceptron (MLP) spiking neurol network written usinng the spinnaker8 front-end interface to map the network to spiNNaker.
@@ -41,7 +41,7 @@ Contents
         dvs36_evtacc_D16_B0_FLAT: LP model with one hidden layer of 16 neurons, zero bias
 ```
 
-```bash       
+```       
 /snn_toolbox/
     ANN-SNN conversion toolbox - used for the conversion and simulations
 ``` 
